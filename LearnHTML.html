@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EXPLAINED</title>
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+         <h1>EMMAZ TECHNOLOGIES</h1>
+         <span>EXPLORING IT</span>
+     </div>
+        <nav role="navigation" id="main-nav">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="LearnHTML.html" class="active">LearnHTML</a></li>
+                <li><a href="Hosting.html">Hosting</a></li>
+                <li><a href="CSS_Colors.html">CSS</a></li>
+                <li><a href="codepen.html">Codepen</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="grid-cont">
+        <aside>
+            <nav id=HTML-nav>
+                <ul>
+                    <li><a href="#intro-HTML">What is HTML</a></li>
+                    <li><a href="#HTML-HEADING">HTML Headings</a></li>
+                    <li><a href="#HTML-PARAGRAPH">HTML Paragraphs</a></li>
+                    <li><a href="#HTML-lists">HTML List</a></li>
+                    <li><a href="#HTML-Link">HTML Link</a></li>
+                   <li><a href="#HTML-IMAGES">HTML Images</a></li>
+                    <li><a href="#HTML-TABLES">HTML Table</a></li>
+                    <li><a href="#HTML-MULTIMEDIA">HTML Multimedia</a></li>
+                    <li><a href="#HTML-SEMANTIC">HTML Sematic Tags</a></li>
+                    <li><a href="#">Recommendations</a></li>
+                </ul>
+                    
+            </nav>
+        </aside>
+       <div class="main-content">
+       <section id="intro-HTML">
+        <h1>what is HTML??</h1>
+       <p>
+           HTML  stands for <span>H</span>yper<span>T</span>ext  <span>M</span>arkup  <span>L</span>anguage. HTML is a language used by Web Developer/Designers/Programmers to describe the  <span class="smaller-span"> structure</span> and <span class="smaller-span">content</span>
+           of a website, HTML is a Markup Language (language used to markup/define documents designed to be displayed in a web browser) and not a Programming language
+           
+       </p>
+       <p>
+           HTML Documents  are files that have an extension of <span class="smaller-span">.html</span> or <span class="smaller-span">.htm</span>, HTML Documents contains HTML elements/tags which are used by the browser to intrepret a page and to display it 
+           properly for the users.
+           HTML elements/tags most commonly come in pairs like <span class="medium-span">&lt;h1&gt;</span> and <span class="medium-span">&lt;/h1&gt;</span> but a few comes as self-closing tags or empty elements like: <span class="medium-span">&lt;img&gt;</span>
+       </p>
+         <div> 
+             <figure id="Anatomy">
+              <figcaption><h2>THE ANATOMY OF AN HTML ELEMENT</h2></figcaption>
+           <img src="IMG/HTML-Anatomy.png" alt="">
+            </figure>
+         </div>
+        <p>
+            Elements are identified by tags in source code. Tags consist of the element name within angle brackets(<span class="medium-span">&lt;&gt;</span>)
+            Any text that lies between this angle brackets are not displayed by the browser but used to interpret and structure the content. 
+
+        </p>
+     <article>
+         <h2>Basic Document Structure</h2>
+         <pre>
+         &lt;!DOCTYPE html&gt;
+         &lt;html&gt;
+           &lt;head&gt;
+              &lt;meta charset=&quot;UTF-8&quot;&gt;
+              &lt;title&gt;Title Here&lt;/title&gt;
+           &lt;/head&gt;
+           &lt;body&gt;
+           CONTENTS GOES HERE
+           &lt;/body&gt;
+        &lt;/html&gt;
+        </pre>
+        <p>
+            The First line in this example is called <span class="smaller-span">DOCTYPE DECLARATION </span>OR DOCUMENT TYPE DECLARATION, It is used to communicate
+            to browsers that the document is written in <span class="smaller-span">HTML5</span>
+        </p>
+        <p>
+            The entire document is contained within an html element, which is also called the <span class="smaller-span">ROOT</span> element cause it contains all elements in the
+            document
+        </p>
+        <p>
+            The Document is then divided into two sections within the html element, the <span class="smaller-span">Head</span> and <span class="smaller-span">Body</span>. The head element contains all elements that 
+            pertain to the document and the web browser that are not displayed as content to the user. For example: Metadata, Script, Stylesheets, title .
+        </p>
+        <p>
+            The body element will contain everything that will be displayed to the users as content in the browser
+        </p>
+     </article>
+      <artice>
+          <h2>Block and Inline Elements</h2>
+          <p>
+              They are basically two types of elements which are Block and Inline elements.
+          </p>
+          <p>
+            <span class="smaller-span">Block Element</span>: They are elements that will begin on newline and takes up enough space on the document as though they were little 
+              rectangular boxes on the page. Examples are Headings, Paragraphs.<br>
+              <span class="smaller-span">Inline Element</span>: These are elements that flow within the flow of content. Examples are: img, span
+          </p>
+         <h2>Attributes</h2> 
+          <p>
+              Attributes are instructions that clarify or modify an element. for instance the img element requires the attribute
+              (src) to specify the locaton of the image <br>Attributes comes after the opening tags <br>
+        <span><code>
+            &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+           </code></span><br>
+           
+          </p>
+        <hr>
+      </artice>
+    </section><!--END OF DIVISION NAMED INTRO-HTML-->
+    <section id="HTML-HEADING">
+        <h2>HTML HEADINGS</h2>
+        <article>
+        <p>Just like in an English essay, we add some sort of heading to our essay to help our readers understand the structure of our essay.
+            This headings or sub-headings help us in conveying the meaning or description of what the whole essay is about. There would mostly be a main heading
+            which communicates the purpose of the essay and also some sub headings to give the meaning to other subsections of the essay.<br><br>
+
+            In HTML, there are six levels of this heading ranging from <span class="medium-span"> h1</span> to <span class="medium-span">h6</span>, when we add heading to our contents, the browser use them to create a document outline
+            for the page. Devices like screen readers use the document outline to help users to quickly scan and navigate through a page.
+        </p>
+        <p>
+            Each heading level has a default style of their own but they all mostly come out big and bold with <span class="smaller-span">h1</span>  been the most important and <span class="smaller-span">h6</span> the least important
+            we do not need to use a particular heading level just because we love the feel of the style but we should use them to help in a semantic way knowing that we can change the style with CSS
+        </p>
+        <div class=special-description>
+    <pre>
+    <em>CODE:</em>
+    &lt;h1&gt;THIS IS HEADING LEVEL 0NE&lt;/h1&gt;
+    &lt;h2&gt;THIS IS HEADING LEVEL TWO&lt;/h2&gt;
+    &lt;h3&gt;THIS IS HEADING LEVEL THREE&lt;/h3&gt;
+    &lt;h4&gt;THIS IS HEADING LEVEL FOUR&lt;/h4&gt;
+    &lt;h5&gt;THIS IS HEADING LEVEL FIVE&lt;/h5&gt;
+    &lt;h6&gt;THIS IS HEADING LEVEL SIX&lt;/h6&gt;
+</pre>
+        <em>OUTPUT:
+            <img src="IMG/headinglevelrep.png" alt="An output showing different heading levels"></em>
+        </div>
+        </article>
+
+    </section><!--END OF SECTION NAMED HTML-HEADING--><hr>
+    <section id="HTML-PARAGRAPH">
+        <article>
+            <h2>HTML Paragraphs
+                <em>
+                  <span class="medium-span">&lt;p&gt;...&lt;/p&gt;</span>
+                </em>
+            </h2>
+            <p>
+                In an English essay,we would defintely use Paragraphs in our write-ups and we also would start every new paragraph on newline
+                so in HTML,we mark up paragraphs by placing contents in the opening tag <span class="smaller-span">(&lt;p&gt;)</span> and the closing tag <span class="smaller-span">(&lt;/p&gt;)</span>. Paragraphs are 
+                basically known as block element so they are displayed on newlines by default
+            </p>
+            <p>
+                Paragraphs can contain text, images and other inline elements but cannot contain heading and other element that are block elements by default
+            </p><hr>
+        </article>
+    </section><!--END OF SECTION NAMED HTML-PARAGRAPH-->
+   <section id="HTML-lists">
+       <article>
+           <h2>HTML LIST</h2>
+           <p>
+                HUMANS are natural list markers, we make lists for so many reasons for example:&nbsp; A list of items we want to purchase at a grocery store, A list of to-dos, A list for making our favourite 
+                meals and some of this list requires a particular order (<span class="smaller-span">ORDERED LIST</span>) while some do not require any order (<span class="smaller-span">UNORDERED LIST</span>) <br>
+                HTML provides elements for marking up three different types of lists :</p>
+                <ul>
+                    <li>Unordered lists</li>
+                    <li>Ordered lists</li>
+                    <li>Description Lists</li>
+                </ul>
+                <section class="lists">
+                <h3>Unordered Lists</h3>
+                <p>Unordered lists are for lists that do not require an order, Unordered lists displays with a bullet before the list item and can be to change with style rules.<br>
+                   Unordered lists are marked up  in <span class="medium-span">ul</span> elements.The opening tag <span class="medium-span">&lt;ul&gt;</span> goes before the first list item and closing tag <span class="medium-span">&lt;/ul&gt;</span>
+                   goes after the last item, list items in Unordered list are marked up in opening <span class="medium-span">&lt;li&gt;</span> and closing <span class="medium-span">&lt;/li&gt;</span>
+                </p>
+                <p>Only list ltems are permitted within an Unordered list(i.e between <span class="smaller-span">&lt;ul&gt;...&lt;/ul&gt;</span>) however you can put any of type of content element within a list item</p>
+                <p class="para-descr">EXAMPLES SHOWING THE DEFAULT STYLE FOR UNORDERED LISTS:</p>
+           <div class="special-description">
+<pre>
+    <em>CODE:</em>
+    &lt;ul&gt;
+        &lt;li&gt;Toyota&lt;/li&gt;
+        &lt;li&gt;Mazda&lt;/li&gt;
+        &lt;li&gt;Ford&lt;/li&gt;
+        &lt;li&gt;Nissan&lt;/li&gt;
+    &lt;/ul&gt;
+</pre>
+            <em>
+            OUTPUT:
+            <img src="IMG/Unorderedlist.png" alt="ILLUSTRATON SHOWING DEFAULT STYLE FOR UNORDERED LIST">
+            
+            </em>
+           </div>
+           <h3>Ordered Lists</h3>
+           <p>
+               Ordered list are for items that are required to be in a sequential order such as procedure for cooking a meal,They function just like an unordered list 
+               but they are rather placed in the <span class="medium-span">ol</span> element and the browser orderly inserts numbers to an unordered list. <br>
+               You can determine the values with which your ordered list numbering starts by using the <span class="medium-span">start</span> attribute in the ol element.
+           </p>
+           <p class="para-descr">EXAMPLES SHOWING THE DEFAULT STYLE FOR ORDERED LISTS:</p>
+           <div class="special-description">
+<pre>
+    <em>CODE:</em>
+    &lt;ol&gt;
+        &lt;li&gt;Toyota&lt;/li&gt;
+        &lt;li&gt;Mazda&lt;/li&gt;
+        &lt;li&gt;Ford&lt;/li&gt;
+        &lt;h4&gt;Nissan&lt;/li&gt;
+    &lt;/ol&gt;
+</pre>
+            <em>
+            OUTPUT:
+            <img src="IMG/orderedlist.png" alt="ILLUSTRATON SHOWING DEFAULT STYLE FOR UNORDERED LIST">
+            
+            </em>
+           </div>
+           <h3>Description Lists</h3>
+           <span class="medium-span">&lt;dl&gt;...&lt/dl&gt;</span>  --- <em>Description List</em><br>
+           <span class="medium-span">&lt;dt&gt;...&lt/dt&gt;</span>  --- <em>a name such as term or label</em><br>
+           <span class="medium-span">&lt;dd&gt;...&lt/dd&gt;</span>  --- <em>a value such as description or definition </em>
+            <p>Description lists are used for any type of name/value pair such as terms and definitions, question and answers and so on.
+                it&apos;s structure is quite different from ordered and unordered list. The whole description list is marked up inside <span class="medium-span">dl</span>
+                element<br>
+                The content of a <span class="medium-span">dl</span> is some numbers of <span class="medium-span">dt</span> element indicating the names and <span class="medium-span">dd</span> elements for their respective values.<br>
+                The <span class="smaller-span">dl</span> element is allowed to contain <span class="smaller-span">dt</span> and <span class="smaller-span">dd</span> element and you can&apos;t place heading/content-grouping element in dt element but dd element can contain other elements in it
+            </p>
+            <p class="para-descr">EXAMPLES SHOWING THE DEFAULT STYLE FOR ORDERED LISTS:</p>
+            <div class="special-description">
+<pre>
+    <em>CODE:</em>
+&lt;dl&gt;
+        &lt;dt&gt;Serif examples&lt;/dt&gt;
+        &lt;dd&gt;Baskervile&lt;/dd&gt;
+        &lt;dd&gt;Goudy&lt;/dd&gt;
+        &lt;dt&gt;Sans-serif examples&lt;/dt&gt;
+        &lt;dd&gt;Helvetica&lt;/dd&gt;
+        &lt;dd&gt;Futura&lt;/dd&gt;
+        &lt;dd&gt;Avenir&lt;/dd&gt;
+    &lt;/dl&gt;
+</pre>
+             <em>
+             OUTPUT:
+             <img src="IMG/descriptionlist.png" alt="ILLUSTRATON SHOWING DEFAULT STYLE FOR DESCRIPTION LIST">
+             
+             </em>
+            </div>
+            </section>    
+       </article>
+   </section> <hr>
+   <section id="HTML-Link">
+         <h2>HTML LINK</h2>
+         <article>
+         <p>For so many reasons when we are creating websites  we would want to link to other resources on other people&apos;s website or on our page.
+            <br>Linking is made possible by using the anchor element <span class="smaller-span">(&lt;a&gt;...&lt;/a&gt;)</span>. To make a text a link, we simply put it between the opening (<span class="medium-span">&lt;a&gt;</span>) elemennt and closing (<span class="medium-span">&lt;/a&gt;</span>) element and use the <span class="smaller-span">href</span> attribute to specify the URL of the target page,
+            we can also make an image a link by putting the <span class="medium-span">img</span> element in the anchor element.
+         </p>
+         <p>
+             Most browsers displays a linked text in blue and underlined while visited links in purple by default 
+         </p>
+         <p class="para-descr"> STRUTURE FOR AN ANCHOR ELEMENT<br>
+            <span><code>&lt;a href=&quot;URL&quot;&gt; Linked Content &lt/a&gt;</code></span>
+         </p>
+             <h3> HREF Attributes</h3>
+             <p>
+                We tell the browsers the document or website we want to link to by using the <span class="smaller-span"> href</span> attribute to provide the URL of document or website, we mostly point to other HTML document, however we could also point to other web resources such as images, video, audio files.
+                <br>We could possibly run into errors when we are specifying our URLs and that&apos;s why we must understand the type of URL  and the way they function in their use-cases 
+             </p>
+             <h4>Absolute URLs:</h4>
+             <p>
+                 Absolute URLs provide the full URL for the document including the protocol <span class="smaller-span">(http:// or https://)</span>, the domain name and the pathname as necessary. Absolute URLs are used to pointing to resources out on the web or internet.
+                <br> 
+                <em class="para-descr">EXAMPLE OF AN ABSOLUTE LINK TO GOOGLE.COM:<br>
+                <span><code>&lt;a href=&quot;https://www.google.com&quot&gt; Go to GOOGLE&lt;/a&gt;</code></span>
+            </em>
+             </p>
+             
+            <h4>Relative URLs:</h4>
+              <p>
+              Relative URLs provides the pathname to a file relative to the current document. They are used when linking to documents or resources on your website (on the same server) and requires no protocol or domain name.
+              <br>Since Relative URLs have to be relative the current document, we have to understand the structure of our files and relation of our files to each other to ensure proper functioning of relative URLs.
+              </p>
+              <h5>Linking within a Directory</h5>
+            <p> When linking to a file in the same directory, you need to provide only the name of the file.
+              when the URL is just a file name, the server looks in the current directory that contains the document that contains the link</p> 
+               <blockquote class="blockquote-blue"> A link to a filename indicates the linked file is in the same directory as the current document</blockquote>
+               <h5>Linking to a Lower Directory</h5>
+               <p>
+                   When linking to a lower directory, you are require to include the directory of the file
+                 <em class="para-descr">FOR EXAMPLE:
+                   <span><code>&lt;a href=&quot;Cars/Toyota.html&quot;&gt;Toyota&lt;/a&gt;</code></span></em>  
+                The directory named Cars must be in a lower directory to the current working document, if the directory are two steps away from the working document, you have to tells to go down 
+                two directory to the actual file by listing the URL of the directory out by seperating with a forward slash(/)
+               </p>
+               <blockquote class="blockquote-blue">When you link to a file in a lower directory ,the pathname contains the names of each sub directory you go through to get the file</blockquote>
+            <h5>Linking to a Higher directory</h5>
+            <p>
+              To link from a current document to a higher directory, we make use of a unix convention <span class="medium-span">(../)</span>, when the browser sees your URL with (../) convention,
+              it tells the browser to go up one directory and then follow the path to the specified file.<br>
+              if you are required to move up the directory more than once,you would specify the ../ convention the number of times it has to move up a directory
+            </p>
+            <blockquote class="blockquote-blue">Each ../ at the begining of the pathname tells the browser to go up one directory level to look for the file</blockquote>
+            <h3>Target Attribute</h3>
+            <p>We use an absolute links to other webpage, you probably won&apos;t want your users to totally forget about your page or find it stressful to find their ways back to your page, so you might want to
+                determine where your clicked link opens up to your users, you can determine that by using the <span class="smaller-span">Target</span> attribute<br>
+                Values of Target attribute:<br>
+              <span class="medium-span"> _blank</span>  - used to open a page in a new browser window<br>
+              <span class="medium-span">_self</span>   - used to open a page in the same browser windows as the previous
+            </p>
+            </article>
+   </section><hr>
+   <section id="HTML-IMAGES">
+       <article>
+              <h2>HTML images</h2>
+              <section>
+               <h3>Image Formats</h3>
+               <p>
+                   We will get to the IMG element in a moment but it is of great important to note that you can&apos;t just put any image on a webpage, it must be in a one of the web-supported formats.
+                   Images that are made of grid of colored pixels(known as bitmapped or raster images) must be saved as an PNG, JPG or GIF file formats to be able to place on the web and while vector images would have an svg file format.
+            <br>
+            If you have images in other formats such as TIFF, BMP, you will have to convert it into web-supported format for you to able to add it into the web
+               </p>
+               <h3>THE IMG ELEMENT</h3>
+               <p>
+                   <span class="medium-span">&lt;img&gt;- Adds an inline image. </span><br>
+                   The img element helps to communicate to the browser to make a request for the image from the server and to display the image in flow with other content page.
+                   <br>The src and alt attributes are required in the img element ,The src (source) attribute provides the URL to locate the image file.<br>
+                   The alt attribute provides an alternative text that would be displayed if the image is not avaliable and it is helpful for accessiblity,if you add image that no important meaning to your page, it is important to leave the the alt attribute null.
+                   <br>
+                   for each image on your page ,consider what the alternative text would sound like,when the alternative text is read on assitive devices and how it would affects the experience of people using assitive technologies.
+                   <em class=para-descr> BASIC FORMAT FOR INSERTING AN IMAGE:<br>
+                   <span>&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span></em>
+                   It is important to note the following about img element:
+               </p>
+               <ul>
+                   <li>It is an empty element,which means it doesn&apos;t have any content. you jnust place it in the flow of text where the image should go.</li>
+                   <li>It is an inline element.</li>
+                   <li>The img element is also known as a REPLACED element because it is replaced by an exeternal file when the page is displayed.</li>
+                   <li>By default, the bottom edge of an image aligns with the baseline of text.</li>
+                </ul>
+              </section>
+              <h3>PROVISION OF DIMENSION FOR HEIGHT AND WIDTH</h3>
+              To indicate the dimension of an image,Use the WIDTH and HEIGHT attributes, Browsers uses the width and height to reserve a portion of space for the image in the layout to provides disruption of the page when the image fully load.
+              <br> Make sure that the pixel dimensions you specify are the actual dimension of the image to prevent distorted image. 
+       </article>
+   </section><!--END OF HTML-IMAGES-->
+  <section id="HTML-TABLES">
+     <h2>HTML Table</h2>
+     <article>
+         <h3>The use of a Table</h3>
+       <p> HTML Tables were designed for instances where you need to add tabular content(data arranged in columns and rows) to your page and not for presentational purposes as it were used back in the early days of the web, 
+         It was used then to achieve multicolumn layout but with the power of stylesheet, we can use CSS to achieve multicolumn layout which helps in seperating markup from presentation hence improving accessiblity.
+     </p>
+     <h3>Table ELEMENT &lt;table&gt;...&lt;/table&gt;</h3>
+     <p>The HTML Table element is used to communicate to the browser that you are about to define a table, The Table element would contain the <span>tr</span> element and table cell elements<span>(th an td elements)</span>.</p>
+      <h3>Table row element &lt;tr&gt;...&lt;/tr&gt;</h3>
+      <p>The Table row element is used to define the number of rows that would be contained in the table and it contains the table cells (td and th elements), if you need a table with two rows ,you would have to define two tr element in the table. </p>
+      <h3>Table Cell</h3>
+      <p>
+          Cells are the vital part of a table, because the actual content goes with them there is no Table column element because the number of columns are implied by the number of cells in a row, so if you need four rows, you specify four tr element 
+          but if you need four columns, you specify four td or th elements in a row.<br>
+          All content in the table must go within either the th element or td element, they could contain any type of content like text, image and so on.
+      </p>
+      <p>
+          <em class="para-descr">The table is a three rows and three columns to show the default style of a table and struture:</em>
+          <div>
+<pre>
+CODE:
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name &lt;/th&gt;
+        &lt;th&gt;Occupation&lt;/th&gt;
+        &lt;th&gt;Organisation&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bukola Opade&lt;/td&gt; 
+        &lt;td&gt;Full-stack Developer&lt;/td&gt; 
+        &lt;td&gt;Oracle Academy&lt;/td&gt; 
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Emmanuel Onaeko&lt;/td&gt; 
+    &lt;td&gt;Front End Developer&lt;/td&gt; 
+    &lt;td&gt;Emmaz Technologies&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+              <em>
+                OUTPUT:<br>   
+              <img src="IMG/table_Annotation.png" alt="ILLUSTRATON SHOWING A THREE ROW AND THREE COLUMN TABLE AND IT'S DEFAULT STYLE">
+              </em>
+          </div>
+      </p>
+      <h3>Table Header &lt;th&gt;...&lt;/th&gt;</h3>
+        <p>The text marked up in the th elements is dispalyed differently from other cells in a table because they are very important in providing information about a row or column they precede.</p>
+    </article>
+    <article>
+       <h3>Spanning Cells</h3>
+       <p>One fundamental feature of table struture is cell spanning, which is the streching of a cell to cover several rows or columns. spanning of cells create complex table strutures and it does has side effects
+           of making it diffcult for users of screen readers.
+       </p>
+       <h4>Columns Spans</h4>
+       <p>Colums spans is created with the <span>colspan</span> attribute in the td or th elements, it makes a cell to strecth to the right spanning over subsequent columns, the value of the colspan is number of the columns, the cells strecth to
+    and if you do specify a number exceeding the number of column in the table, it adds exeternal column to the table. 
+</p>
+<em class="para-descr">The table shows an example of column spans:</em>
+<div>
+<pre>
+    CODE:
+    &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th colspan=&quot;2&quot;&gt;FAT &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Occupation&lt;/td&gt;
+        &lt;td&gt;Organisation&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tablé&gt
+</pre>
+    <em>
+        OUTPUT:<br>   
+      <img src="IMG/Colums_spans_Annotation .png" alt="ILLUSTRATON SHOWING COLUMN SPAN">
+      </em>
+</div>
+<h4>Rowspans</h4>
+<p>
+    Rowspans is created with the rowspan attribute in th or td elements, it makes a cel to strecth downwars over several rows.
+</p>
+<em class="para-descr">The table shows an example of column spans:</em>
+<div>
+<pre>
+    CODE:
+    &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th rowspan=&quot;3&quot;&gt;FRUIT &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Apples&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gtPineapple&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Bananass&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt
+</pre>
+    <em>
+        OUTPUT:<br>   
+      <img src="IMG/rowspan_Annotation.png" alt="ILLUSTRATON SHOWING ROW SPAN">
+      </em>
+</div>
+
+    </article>
+  </section><!--END OF HTML-TABLES-->
+  <section id="HTML-MULTIMEDIA">
+ <h2>HTML Multimedia</h2>
+ <article>
+   <h3>How media formats work</h3>
+   <p>
+       When a video or audio content is designed for the web, there are two format decisions to make, The First is how the media is encoded(algorithms used to convert the source to 1&apos;s and 0&apos;s and how they are compressed),The method used for encoding is called the CODEC
+       short for code/decode <br>
+       The second , You need to choose the container format for the media.
+   </p>
+   <h4>The Video Formats</h4>
+   <ul>
+       <li>MPEG-4 CONTAINER + H.264 video codec + AAC audio codec</li>
+      <li>WEBM container + VP8 video codec + vorbis audio codec</li> 
+      <li>WEBM container + VP9 video codec + opus audio codec</li>
+      <li>ogg container + Theora video codec + vorbis audio codec</li>
+   </ul>
+   <h4>The Audio Formats</h4>
+   <ul>
+       <li>MP3</li>
+       <li>WAV</li>
+       <li>ogg container + vorbis audio codec</li>
+       <li>MPEG-4 container + AAC audio codec</li>
+       <li>WEBM container + vorbis audio codec</li> 
+       <li>WEBM container + opus audio codec</li>
+   </ul>
+   <table>
+       <caption>Video support in desktop and mobile browsers (as of 2017)</caption>
+       <tr class="border-remove-top">
+           <th>Format</th>
+           <th>Type</th>
+           <th>IE</th>
+           <th>MS Edge</th>
+           <th>Chrome</th>
+           <th>Firefox</th>
+           <th>Safari</th>
+           <th>Opera</th>
+           <th>Android</th>
+           <th>IOS Safari</th>
+       </tr>
+       <tr>
+           <td>MP4(H.264)</td>
+           <td>Video/mp4 mp4 m4v</td>
+           <td>9.0+</td>
+           <td>12+</td>
+           <td>4+</td> 
+           <td>YES*</td>
+           <td>3.2+</td>
+           <td>25+</td> 
+           <td>4.4+</td>
+           <td>3.2+</td>
+       </tr>
+       <tr>
+           <td>Webm(VP8)</td>
+           <td>Video/webm webm webmv</td>
+           <td>-</td>
+           <td>-</td>
+           <td>6+</td>
+            <td>4.0+</td>
+           <td>-</td> 
+           <td>15+</td>
+           <td>2.3+</td>
+           <td>-</td>
+       </tr>
+       <tr>
+        <td>Webm(VP9)</td>
+        <td>Video/webm webm webmv</td>
+        <td>-</td>
+        <td>14+</td>
+        <td>29+</td>
+        <td>28+</td>
+        <td>-</td>
+        <td>16+</td>
+        <td>4.4+</td>
+        <td>-</td>
+       </tr>
+       <tr>
+           <td>Ogg Theora</td>
+           <td>Video/ogg ogv</td>
+           <td>-</td>
+           <td>-</td>
+           <td>3.0+</td>
+           <td>3.5+</td>
+           <td>-</td>
+           <td>13+</td>
+           <td>2.3+</td>
+           <td>-</td>
+       </tr>
+   </table><br>
+
+   <table>
+    <caption> Audio support in current browsers (as of 2017)</caption>
+       <tr>
+           <th>Format</th>
+           <th>Type</th>
+           <th>IE</th>
+           <th>MS Edge</th>
+           <th>Chrome</th>
+           <th>Firefox</th>
+           <th>Opera</th>
+           <th>Safari</th>
+           <th>IOS Safari</th>
+           <th>Android</th>
+       </tr>
+       <tr>
+           <td>MP3</td>
+           <td>audio/mpeg mp3</td>
+           <td>9.0+</td>
+           <td>12+</td>
+           <td>3.0+</td>
+           <td>22+</td>
+           <td>15+</td>
+           <td>4+</td>
+           <td>4.1</td>
+           <td>2.3+</td>
+       </tr>
+       <tr>
+           <td>WAV</td>
+           <td>audio/wav or audio/wave</td>
+           <td>-</td>
+           <td>12+</td>
+           <td>8.6+</td>
+           <td>3.5+</td>
+           <td>11.5+</td>
+           <td>4+</td>
+           <td>3.2+</td>
+           <td>2.3+</td>
+       </tr>
+       <tr>
+        <td>Ogg vorbis</td>
+        <td>audio/mp4 m4a</td>
+        <td>-</td>
+        <td>-</td>
+        <td>4.0+</td>
+        <td>3.5+</td>
+        <td>11.5+</td>
+        <td>-</td>
+        <td>-</td>
+        <td>2.3+</td>
+       </tr>
+       <tr>
+           <td>MPEG-4/AAC</td>
+           <td>audio/ogg ogg oga</td>
+           <td>11.0+</td>
+           <td>12+</td>
+           <td>12.0+</td>
+           <td>-</td>
+           <td>15+</td>
+           <td>4+</td>
+           <td>4.1+</td>
+           <td>3.0+</td>
+       </tr>
+       <tr>
+        <td>Webm/vorbis</td>
+        <td>audio/webm webm</td>
+        <td>-</td>
+        <td>-</td>
+        <td>6.0+</td>
+        <td>4.0+</td>
+        <td>11.5+</td>
+        <td>-</td>
+        <td>-</td>
+        <td>2.33+</td>
+       </tr>
+       <tr>
+        <td>Webm/opus</td>
+        <td>audio/webm webm</td>
+        <td>-</td>
+        <td>14+</td>
+        <td>33+</td>
+        <td>15+</td>
+        <td>20+</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+       </tr>
+   </table>
+ </article>
+ <article>
+     <h3>HTML video Element &lt;video&gt;...&lt;/video&gt;</h3>
+     <p>The Video element is used to add a video player to the webpage, video on the web has to be in a particular format, but not all browsers supports all formats and so you might need to specify different formats and leave it up to the browser to determine the best format it should use.
+         but if we ignore format differences, we could use one video just like in the image element using src attribute in the video tags.
+     </p>
+     <em class="">An example of video element struture:
+         <pre>
+ &lt;video src=&quot;light_reel.mp4&quot; width=&quot;640&quot; 
+ height=&quot;480&quot; poster=&quotlight_reel.jpg&quot; controls 
+ autoplay&gt;...&lt;/video&gt;
+ </pre>
+         </em>
+    <p>Attributes in the example to take note</p>
+    <ul>
+        <li><p>width=&quot;pixel measurement&quot; height=&quot;pixel measurement&quot;<br>
+            They are used to specify the size of the box that contains the video player</p>
+        </li>
+        <li><p>Poster=&quot;url of image&quot;<br>
+             Provides the location of an image to show up in place of the video before the video is played.
+        </p></li>
+        <li><p>src=&quot;url of video&quot;<br>
+            It provides the location of the video
+        </p></li>
+        <li><p>
+            Controls<br>
+            The controls attribute makes the browser to display its built in media controls (play/pause button,volume controls)
+        </p></li>
+        <li>
+            <p>
+                Autoplay<br>
+                It makes the video to start playing automatically after it has downloaded enough of the media file to play without stopping
+            </p>
+        </li>
+        <li><p>
+            Loop<br>
+            It makes the video to continously plaing muted. To make the video to be muted when it loads
+        </p></li>
+    </ul>
+    <p>
+        Because it is much adviseable to specify different format and allow the browser to choose to avoid misfunctionality of the page, we could make use of the different source tag in the video element,<br>
+        <em class="para=descr">
+         This example provides a video clip in the souped-up WebM/VP9 for,at for supporting browsers,as well as an MP4 and ogg Theora for other browsers:
+<pre>
+    CODE:
+    &lt;video controls poster=&quot;clip.jpg&quot;&gt;
+    &lt;source src=&quot;clip.webm&quot; type=&quot;video/webm&quot;
+    &lt;source src=&quot;clip.ogg&quot; type=&quot;video/ogg&quot;
+    &lt;source src=&quot;clip.mp4&quot; type=&quot;video/mp4&quot;
+    &lt;/video&gt;
+</pre>
+        </em>
+    </p>
+    <p>
+        The type attribute is used to give more information about the type of formats used for better and appropriate rendering
+    </p>
+ </article>
+ <article>
+     <h3>HTML Audio Element &lt;audio&gt;...&lt;/audio&gt;</h3>
+     <p>
+         The Audio element functions more like the video element but exception to the following attributes:width, height,poster.<br>
+         Just like in the video element, you can also provide different audio format options using the source element.</p>
+         <em class="para=descr">
+            This example provides a video clip in the souped-up WebM/VP9 for,at for supporting browsers,as well as an MP4 and ogg Theora for other browsers:
+<pre>
+CODE:
+&lt;audio controls&gt;
+    &lt;source src=&quot;song.webm&quot; type=&quot;audio/webm&quot;
+    &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;
+    &lt;source src=&quot;song.mp4&quot; type=&quot;audio/mp4&quot;
+&lt;/audio&gt;
+</pre>
+           </em>
+        </p>
+ </article>
+<article>
+    <h3>Adding Text Tracks</h3>
+    <span>&lt;track&gt;...&lt;track&gt;- Adds Synchronized text to embedded media.</span>
+    <p>
+        When using audio or video, it is adviseable to adds a synchronized text with the timeline of the video or audio.
+    </p>
+    <h4>Uses of Text Tracks</h4>
+    <ul>
+        <li>Subtitles in alternative language</li>
+        <li>Captions for the hearing impaired</li>
+        <li>Descriptions of which is happening in a video for sight impaired</li>
+        <li>Chapter titles to allow for navigation through the media</li>
+        <li>Metadata that is not displayed but can be used by scripts</li>
+    </ul>
+    <p>
+        Using Text tracks defintely makes media more accessible, use the track element in the video or audio element you want to annotate and the track element must appear after all the source elements and include these attributes.
+    </p>
+    <ul>
+        <li><p> src - to points to the text file.</p></li>
+        <li><p>kind - to specifies the type of text annotation you are providing, if kind is set to <span>subtitle</span>, you must also specify the language with the <span>srclang</span>attribute.</p></li>
+        <li><p>label - to provide a name for the track that can be used in the interface for selecting a particular track.</p></li>
+        <li><p>default - marks a particular track as default and it may be used on only one trackk within a media element.</p></li>
+    </ul>
+    <em class="para-descr">
+        This example provides English and French subtitle option to a video:
+    </em>
+    <pre>
+CODE:
+&lt;video width=&quot;640px&quot; height=&quot;320&quot; controls&gt;
+&lt;source src=&quot;indigenous_movie,mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;track src=&quot;english_subtitles.vtt&quot;
+kind=&quot;subtitles&quot;
+srclang=&quot;en&quot;
+label=&quot;English Subtitles&quot;
+default&gt;
+&lt;track src=&quot;french_subtitles.vtt&quot;
+kind=&quot;subtitles&quot;
+srclang=&quot;fr&quot;
+label=&quot;sous-titres en francais&quot;&gt;  
+</pre>
+    <h4>Web Video Text Tracks -- WebVTT</h4>
+    <p>
+        In the previous example, you notice that the track is point to a file with .vtt suffix, The text is in the WebVTT format.<br>
+        A WebVTT Files contains cues to the video and look like this:<br>
+        00:00:01.345 --&gt; 00:00:03.456<br>
+        Welcome to class<br>
+        Cues are seperated with empty line spaces, Each cue has a start and end time seperated by an arrow.
+    </p>
+</article>
+  </section><!--END OF HTML-MULTIMEDIA-->
+  <section id="HTML-SEMANTIC">
+      <article>
+          <section>
+          <h2>Html sematic tags</h2>
+          <p>When we write HTML, we must ensure that our markup is not only syntaxically correct but also semantically correct so that our content on our webpage can be accessible to all users of the web.<br>
+             Semantic Tags helps in labelling content to show it&apos;s precise functions on the page and they also helps to divide the page in a more useful way For example we could use semantic tag to divide a page into header,
+             main, footer , we about to dive into some semantic tags that help to build a more richer and accessible website.
+        </p>
+          </section>
+          <section>
+              <h3>Headers &lt;header&gt;...&lt;header&gt;</h3>
+             <p>The header element is used to define the introductionary part of a page or section, The header element is not necessary used to only define the introductionary part of a webpage omly but can be used to define the introductionary part for articles, sections.</p>
+             <h3>Footer &lt;footer&gt;...&lt;/footer&gt; </h3>
+             <p>The Footer element is used to define the type of information or content that would come at the end of a page For example Copyright informations, Trademarks, contact-me form, they do not necessary come at the end of the page only but can be used in associated with a particular section/article.</p>
+             <h3>Main content &lt;main&gt;...&lt;/main&gt;</h3>
+             <p>The main element is used to specify the main part of the webpage of a particular section, The main element must be unique to the page or section and The W3C HTML specification states that pages should have one main section and it should not be nested with an article, aside, header, nav.</p>
+             <h3>Section and Articles</h3>
+             <span>&lt;section&gt;...&lt;/section&gt; - Thematic group of content</span><br>
+            <span>&lt;article&gt;&lt;/article&gt;- Self-contained, reusable compostion.</span>
+             <p>Long document are eaiser to use if they are divided into smaller parts For example, Books are divided into chapters. To divide long web documents in thematic sections use the section element<br>
+                Section element might contain an heading and other content that has a meaningful reason being grouped together.<br>
+                Use article elements for self-contained works that could stand alone, it is much useful for newpaper articles, blogposts, comments.
+            </p>
+            <h3>Navigation &lt;nav&gt;... &lt;/nav&gt;</h3>
+            <p>We can  group links that allows for easy access to the content to our users<br>
+            When a combination of links acts as the primary navigation of our page, it is appropriate to wrap then up in a nav element to makes the purpose of the purpose of the links explivity clear as a navigation.</p>
+            </section>
+      </article>
+  </section>
+       </div><!--END OF MAIN CONTENT-->
+       <div id=logo-section>
+           <p>follow and subscribe to our social media &nbsp; contacts</p>
+           <a href="https://web.facebook.com/oladipupo.onaeko" target="_blank"><img src="IMG/facebook.svg" class="contact-image" alt="" ></a>
+           <a href="https://www.instagram.com/emmanueloladipupo483/?hl=en" target="_blank"><img src="IMG/instagram.svg" class="contact-image" alt=""></a>
+           <a href="https://github.com/eonaeko" target="_blank"><img src="IMG/github-icon.svg" class="contact-image" alt=""></a>
+           <a href="https://twitter.com/eonaeko778" target="_blank"><img src="IMG/twitter.svg" class="contact-image"alt=""></a>
+           <a href="https://www.linkedin.com/in/onaeko-emmanuel-1bab101a9/" target="_blank"><img src="IMG/linkedin.svg" class="contact-image"alt=""></a>
+           <a href="https://www.youtube.com/channel/UCKH_fa4fUdFJ2G3jsjUuFKA?view_as=subscriber" target="_blank"><img src="IMG/youtube.svg" class="contact-image" alt=""></a>
+       </div>
+       </div><!--end of container-->
+    </main>
+    <footer>
+       <p class="footer-text-center"> &copy; Copyright 2020 Designed  by Emmanuel Onaeko</p>
+       <div class="form-grid">
+        <form>
+            <fieldset>
+            <legend>Contact-us</legend>
+            <label for="Name"> NAME:</label><br>
+            <input type="text" name="" required id=Name><br>
+            <label for="form-subject">SUBJECT:</label><br>
+            <input type="text" name="" id="form-subject"><br>
+            <label for="form-review">WE want to hear from you<br>
+            <textarea name="" id="form-review"></textarea></label><br>
+            <button>SUBMIT</button>
+        </form>
+    </fieldset>
+    <section>
+    <div class="form-contact-image">
+        <a href="https://www.linkedin.com/in/onaeko-emmanuel-1bab101a9/" target="_blank"><img src="IMG/linkedin.svg" alt=""></a>
+        <a href="https://web.facebook.com/oladipupo.onaeko" target="_blank"><img src="IMG/facebook.svg" alt="" ></a>
+        <a href="https://www.instagram.com/emmanueloladipupo483/?hl=en" target="_blank"><img src="IMG/instagram.svg" alt=""></a>
+        <a href="https://github.com/eonaeko" target="_blank"><img src="IMG/github-icon.svg" alt=""></a>
+        <a href="https://twitter.com/eonaeko778" target="_blank"><img src="IMG/twitter.svg" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCKH_fa4fUdFJ2G3jsjUuFKA?view_as=subscriber" target="_blank"><img src="IMG/youtube.svg"alt=""></a>
+    </div>
+    <p>
+        You could also contact us via our social media contacts.<br>
+        We are looking forward to hearing and working with you.
+       </p>
+       <p > 
+           <a href="#intro-HTML" class="footer-link">What is HTML</a>
+        <a href="#HTML-HEADING" class="footer-link">HTML Headings</a>
+        <a href="#HTML-PARAGRAPH" class="footer-link">HTML Paragraphs</a>
+        <a href="#HTML-lists" class="footer-link">HTML List</a>
+        <a href="#HTML-Link " class="footer-link">HTML Link</a>
+       <a href="#HTML-IMAGES" class="footer-link">HTML Images</a>
+        <a href="#HTML-TABLES" class="footer-link">HTML Table</a>
+        <a href="#HTML-MULTIMEDIA" class="footer-link">HTML Multimedia</a>
+        <a href="#HTML-SEMANTIC" class="footer-link">HTML Sematic Tags</a>
+        <a href="#" class="footer-link">Recommendations</a>
+</p>
+</section>
+</div>
+    </footer>
+</body>
+</html>
