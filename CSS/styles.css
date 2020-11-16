@@ -4,6 +4,7 @@ body{
     background-color: #fafafa;
     
 }
+/*STYLES MEANT FOR THE HEADER SECTION + THE MAIN NAVIAGATION OF THE PAGE */
 header{
     line-height: 1.6em;
     margin: 0;
@@ -21,7 +22,7 @@ header div{
 }
 header  h1{
     font-family: 'Roboto Mono', monospace, serif;
-    font-style: italic;
+    /*font-style: italic;*/
     font-size: 2em;
     word-spacing: .35em;
     color:rgb(80, 255, 60);
@@ -39,9 +40,6 @@ h1{
     margin: 0;
     padding: 0;
     padding-top: 5px;
-}
-a.icon{
-    display: none;
 }
 #main-nav{
 display: block;
@@ -73,15 +71,20 @@ display: block;
 #main-nav .active{
     background-color: teal;
 }
-/* Styles*/
+#main-nav a.icon{
+    display: none;
+}
+/* STYLES FOR THE ASIDE NAVIAGATION FOR EASY ACCESS TO THE LEARNHTML PAGE*/
 aside{
     margin:0;
    /* background-color: rgb(140,80, 120);*/
    background-color:rgb(200,204,255);
+   background-color:rgba(180, 204, 180, .5);
 }
 #HTML-nav{
     margin: 0;
     background-color: rgb(200,204,255);
+  
 }
 #HTML-nav ul{
     float: left;
@@ -97,6 +100,8 @@ aside{
 }
 #HTML-nav li:hover{
     background-color: rgb(84,164, 176);
+   background-color:rgb(170,204,255);
+
 }
 #HTML-nav li a{
     display: block;
@@ -120,6 +125,7 @@ iframe{
     height: 100vh;
     margin: 2% 1% 0 2%;
 }
+/* STYLES FOR MAJOR CONTENT OF THE PAGES*/
 .main-content{
     margin-left: 20px;
     margin-right: 20px;
@@ -284,8 +290,9 @@ img[src="IMG/HTML-Anatomy.png"]{
 /* STYLES FOR THE FOOTER AND FORM-RELATED */
 footer{
     background-color: #66c5e8;
+    background-color:rgba(180, 204, 180,.5);
     font-family: 'Roboto Mono', monospace, serif;
-   margin-top: -15px;
+    margin-top: -15px;
 }
 footer .footer-text-center{
     text-align: center;
@@ -435,21 +442,19 @@ img[src="IMG/codeclan.svg"]{
 @media screen and (max-width:768px) {
     header{
         margin: 0;
-        background-image: none;
-        background-color: #66c5e8;
-        width: 100%;
-        height: 100px;
+        /*background-color: #66c5e8;*/
+        width: 100%; 
+        height: 50%; 
     }
     header div{
         text-align: left;
     }
     header h1,header div span{
-        color: black;
+       /* color: black;*/
         font-style: normal;
         
     }
     #main-nav{
-    display: none;
     }
    .main-content h1{
       font-size: 150%;
@@ -500,7 +505,8 @@ img[src="IMG/codeclan.svg"]{
         height: 200px;
     }
     fieldset{
-        width: 200px;
+        box-sizing: border-box;
+        width: 50%;
         height: 500px;
     }
     th,td,table{
@@ -553,7 +559,24 @@ img[src="IMG/codeclan.svg"]{
         width: 100px;
         height: 100px;;
     }
-    
+    #main-nav #myLinks{
+        display: none;
+    }
+#main-nav a.icon{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+   }
+   #main-nav #myLinks{
+       background-color: greenyellow;
+   }
+   #main-nav #myLinks li {
+       display: block;
+   }
+   #main-nav #myLinks a{
+       width: 100%;
+   }
 }
 
     
