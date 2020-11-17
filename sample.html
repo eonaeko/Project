@@ -1,58 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        form{
-            background-color: gray;
-            width: 350px;
-            height: 500px;
-            border-radius: 10px;
-            margin: 0 auto;
-        }
-   fieldset {
-       border: none;
-   }
-legend{
-    font-size: 130%;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-label{
-    font-size: 120%;
-    font-weight: bold;
-}
-input{
-    width:300px;
-    height: 25px;
-    border-radius:5px;
-    margin: 10px auto;
-    font-size: 110%;
-    background-color: #fafafa;
-}
-input[type="submit"]{
-    background-color: black;
-    color: white;
-    margin-left:auto;
-    margin-right: auto;
-    padding:0 5px 0 5px;
-    text-transform: uppercase;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
 }
 
-    </style>
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 <body>
- <form>'
-     <fieldset>
-         <legend>Add User</legend>
-         <label for="form-name">Name:</label><br>
-         <input type="text" name="" id="form-name"><br>
-         <label>Email:</label><br>
-         <input type="email" name="" id="form-email"><br>
-         <input type="submit" value="sumbit">
-     </fieldset>
- </form>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<h2>Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+   
 </body>
-</html>
+</html> 

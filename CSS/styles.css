@@ -25,7 +25,7 @@ header  h1{
     /*font-style: italic;*/
     font-size: 2em;
     word-spacing: .35em;
-    color:rgb(80, 255, 60);
+    color: rgba(24,255,180 , .9);
     margin-bottom: 5px;
     margin-top: 10px;
     
@@ -33,7 +33,7 @@ header  h1{
 header div span{
     font-family: 'Roboto Mono', monospace, serif;
     letter-spacing: .2em;
-    color: rgb(24,255,180);
+    color: rgba(24,255,180, .9);
     font-size: 1em;
 }
 h1{
@@ -45,7 +45,6 @@ h1{
 display: block;
 }
 #main-nav ul{
-   /* margin-left:60px;*/
     padding:15px;
 }
 #main-nav ul li, #main-nav a{
@@ -54,6 +53,8 @@ display: block;
     padding:10px;
 }
 #main-nav a{
+    font-size: 110%;
+    font-family: 'Roboto Mono', monospace, serif;
     box-sizing: border-box;
     text-decoration: none;
     text-align: center;
@@ -65,11 +66,11 @@ display: block;
     /*background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,
     #d1d1d1 51%, #fefefe 100%);*/
 }
-#main-nav a:hover {
-    background-color:yellowgreen;
+#main-nav a:focus, #main-nav a:hover  {
+    background-color:rgba(199, 235, 199, 1);
 }
 #main-nav .active{
-    background-color: teal;
+    background-color:rgba(124, 148, 124, .8);
 }
 #main-nav a.icon{
     display: none;
@@ -83,14 +84,18 @@ aside{
 }
 #HTML-nav{
     margin: 0;
-    background-color: rgb(200,204,255);
-  
+  /* background-color: rgb(200,204,255);*/
+}
+#HTML-nav a.closebtn{
+    display:none;
 }
 #HTML-nav ul{
-    float: left;
     height: 100vh;
     overflow: hidden;
    /* position: fixed;*/
+}
+#HTML-nav a.icon{
+    display: none;
 }
 #HTML-nav li{
     margin: -12px;
@@ -99,9 +104,7 @@ aside{
     border-bottom:2px solid black;
 }
 #HTML-nav li:hover{
-    background-color: rgb(84,164, 176);
-   background-color:rgb(170,204,255);
-
+    background-color: rgb(170,204,255);
 }
 #HTML-nav li a{
     display: block;
@@ -306,8 +309,9 @@ footer p{
     letter-spacing: .2em;
 }
 .footer-link{
-    color: #455f69;
+    color: #48a9cf;
     text-decoration: none;
+    font-size: 80%;
 }
 textarea{
     width: 400px;
@@ -364,7 +368,8 @@ input{
     border-radius: 5px;
     border: none;
     Color:green;
-    font-size: 110%;
+    font-size: 100%;
+
 }
 input:focus{
     border: 3px solid salmon;
@@ -459,28 +464,20 @@ img[src="IMG/codeclan.svg"]{
    .main-content h1{
       font-size: 150%;
     }
-   /* .#main-nav a{
-        display: block;
-    }
-    .#main-nav a.icon {
-        background: black;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }*/
-   #Anatomy, aside{
+   #Anatomy{
         display: none;
     }
     .grid-cont{
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 100%;
+        box-sizing: border-box;
     }
     .special-grid{
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 100%;
     }
     .main-content{
-        text-align: left;
+         text-align: unset;
+         font-size: 120%;
     }
     pre em{
         font: size 10%;
@@ -499,9 +496,10 @@ img[src="IMG/codeclan.svg"]{
     form{
         border: none;
         border-bottom: 2px solid black;
+        margin: 0 auto;
     }
     textarea{
-        width: 400px;
+        width: 250px;
         height: 200px;
     }
     fieldset{
@@ -509,25 +507,34 @@ img[src="IMG/codeclan.svg"]{
         width: 50%;
         height: 500px;
     }
+    input{
+        width: 250px;
+    }
+    button{
+        margin-left: 70px;
+    }
     th,td,table{
         font-size: 75%;
     }
     #logo-section{
-        overflow: hidden;
+        display: none;
     }
     .contact-image{
         width: 30px;
         height: 30px;
     }
+    .footer-final-note{
+        margin: 0 auto;
+    }
     .Home-description p , .CSS-description p{
         width:50%;
-        height:300px;
+        height:auto;
         font-size: 85%;
         box-shadow: none;
         border-radius: 10px;
         border-color: coral;
         color: cornflowerblue;
-        overflow: hidden;
+
     }
     .CSS-description p{
         overflow: auto;
@@ -567,9 +574,13 @@ img[src="IMG/codeclan.svg"]{
     position: absolute;
     right: 0;
     top: 0;
+    color:rgba(180, 204, 180, .9); ;
+   }
+   #main-nav a.icon:hover {
+       background-color: black;
    }
    #main-nav #myLinks{
-       background-color: greenyellow;
+       background-color:rgba(180, 204, 180, .9);
    }
    #main-nav #myLinks li {
        display: block;
@@ -577,6 +588,17 @@ img[src="IMG/codeclan.svg"]{
    #main-nav #myLinks a{
        width: 100%;
    }
+   #HTML-nav ul{
+    display: none;
+        }
+#HTML-nav a.icon{
+    display: inline;
 }
+   aside {
+    position: fixed;
+    background-color:rgba(180, 204, 180, 1);
+   }
+}
+
 
     

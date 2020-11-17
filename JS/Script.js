@@ -6,3 +6,11 @@
             x.style.display = "block";
           }
         }
+  function Functionnew() {
+    var y = document.getElementById("mySidenav");
+    if (y.style.display === "block") {
+      y.style.display = "none";
+    } else {
+      y.style.display = "block";
+    }
+  }

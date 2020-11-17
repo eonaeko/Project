@@ -17,11 +17,11 @@
      </div>
      
         <nav role="navigation" id="main-nav">
-            <a href="javascript:void(0);" class="icon  myspecial" onclick="myFunction()">
+           <a href="javascript:void(0);" class="icon  myspecial" onclick="myFunction()">
                 <i class="fa fa-bars"></i></a>
             <ul id="myLinks">
-                <li><a href="index.html" class="active" >Home</a></li>
-                <li><a href="LearnHTML.html">LearnHTML</a></li>
+                <li><a href="index.html"  >Home</a></li>
+                <li><a href="LearnHTML.html" class="active">LearnHTML</a></li>
                 <li><a href="Hosting.html">Hosting</a></li>
                 <li><a href="CSS_Colors.html">CSS</a></li>
                 <li><a href="codepen.html">Codepen</a></li>
@@ -33,8 +33,10 @@
     <main>
         <div class="grid-cont">
         <aside>
-            <nav id=HTML-nav>
-                <ul>
+            <nav id="HTML-nav" class="sidenav">
+                <a href="javascript:void(0);" class="icon  myspecial" onclick="Functionnew()">
+                    <i class="fa fa-bars"></i></a>
+                <ul  id="mySidenav"> 
                     <li><a href="#intro-HTML">What is HTML</a></li>
                     <li><a href="#HTML-HEADING">HTML Headings</a></li>
                     <li><a href="#HTML-PARAGRAPH">HTML Paragraphs</a></li>
@@ -46,8 +48,8 @@
                     <li><a href="#HTML-SEMANTIC">HTML Sematic Tags</a></li>
                     <li><a href="#">Recommendations</a></li>
                 </ul>
-                    
             </nav>
+            
         </aside>
        <div class="main-content">
        <section id="intro-HTML">
@@ -364,18 +366,18 @@
      <h2>HTML Table</h2>
      <article>
          <h3>The use of a Table</h3>
-       <p> HTML Tables were designed for instances where you need to add tabular content(data arranged in columns and rows) to your page and not for presentational purposes as it were used back in the early days of the web, 
+       <p> HTML Tables were designed for instances where you need to add tabular content (data arranged in columns and rows) to your page and not for presentational purposes as it were used back in the early days of the web, 
          It was used then to achieve multicolumn layout but with the power of stylesheet, we can use CSS to achieve multicolumn layout which helps in seperating markup from presentation hence improving accessiblity.
      </p>
      <h3>Table ELEMENT &lt;table&gt;...&lt;/table&gt;</h3>
-     <p>The HTML Table element is used to communicate to the browser that you are about to define a table, The Table element would contain the <span>tr</span> element and table cell elements<span>(th an td elements)</span>.</p>
+     <p>The HTML Table element is used to communicate to the browser that you are about to define a table, The Table element would contain the <span class="medium-span">tr</span> element and table cell elements<span class="medium-span">(th an td elements)</span>.</p>
       <h3>Table row element &lt;tr&gt;...&lt;/tr&gt;</h3>
-      <p>The Table row element is used to define the number of rows that would be contained in the table and it contains the table cells (td and th elements), if you need a table with two rows ,you would have to define two tr element in the table. </p>
+      <p>The Table row element is used to define the number of rows that would be contained in the table and it contains the table cells <span class="smaller-span">(td and th elements)</span>, if you need a table with two rows, you would have to define two <span class="medium-span">tr</span> element in the table. </p>
       <h3>Table Cell</h3>
       <p>
-          Cells are the vital part of a table, because the actual content goes with them there is no Table column element because the number of columns are implied by the number of cells in a row, so if you need four rows, you specify four tr element 
-          but if you need four columns, you specify four td or th elements in a row.<br>
-          All content in the table must go within either the th element or td element, they could contain any type of content like text, image and so on.
+          Cells are the vital part of a table, because the actual content goes with them there is no Table column element because the number of columns are implied by the number of cells in a row, so if you need four rows, you specify four <span class="smaller-span">tr</span> element 
+          but if you need four columns, you specify four <span class="smaller-span">td</span> or<span class="smaller-span"> th</span> elements in a row.<br>
+          All content in the table must go within either the  <span class="smaller-span">th</span> element or  <span class="smaller-span">td</span> element, they could contain any type of content like text, image and so on.
       </p>
       <p>
           <em class="para-descr">The table is a three rows and three columns to show the default style of a table and struture:</em>
@@ -407,15 +409,15 @@ CODE:
           </div>
       </p>
       <h3>Table Header &lt;th&gt;...&lt;/th&gt;</h3>
-        <p>The text marked up in the th elements is dispalyed differently from other cells in a table because they are very important in providing information about a row or column they precede.</p>
+        <p>The text marked up in the  <span class="smaller-span">th</span> elements is dispalyed differently from other cells in a table because they are very important in providing information about a row or column they precede.</p>
     </article>
     <article>
        <h3>Spanning Cells</h3>
-       <p>One fundamental feature of table struture is cell spanning, which is the streching of a cell to cover several rows or columns. spanning of cells create complex table strutures and it does has side effects
+       <p>One fundamental feature of table struture is <span class="medium-span">cell spanning</span>, which is the streching of a cell to cover several rows or columns. spanning of cells create complex table strutures and it does has side effects
            of making it diffcult for users of screen readers.
        </p>
        <h4>Columns Spans</h4>
-       <p>Colums spans is created with the <span>colspan</span> attribute in the td or th elements, it makes a cell to strecth to the right spanning over subsequent columns, the value of the colspan is number of the columns, the cells strecth to
+       <p>Colums spans is created with the <span class="medium-span">colspan</span> attribute in the <span class="smaller-span"> td</span> or<span class="smaller-span"> th </span> elements, it makes a cell to strecth to the right spanning over subsequent columns, the value of the colspan is number of the columns, the cells strecth to
     and if you do specify a number exceeding the number of column in the table, it adds exeternal column to the table. 
 </p>
 <em class="para-descr">The table shows an example of column spans:</em>
@@ -439,7 +441,7 @@ CODE:
 </div>
 <h4>Rowspans</h4>
 <p>
-    Rowspans is created with the rowspan attribute in th or td elements, it makes a cel to strecth downwars over several rows.
+    Rowspans is created with the<span class="medium-span"> rowspan</span> attribute in<span class="smaller-span"> th </span>or <span class="smaller-span">td</span> elements, it makes a cel to strecth downwards over several rows.
 </p>
 <em class="para-descr">The table shows an example of column spans:</em>
 <div>
@@ -473,7 +475,7 @@ CODE:
  <article>
    <h3>How media formats work</h3>
    <p>
-       When a video or audio content is designed for the web, there are two format decisions to make, The First is how the media is encoded(algorithms used to convert the source to 1&apos;s and 0&apos;s and how they are compressed),The method used for encoding is called the CODEC
+       When a video or audio content is designed for the web, there are two format decisions to make, The First is how the media is encoded(algorithms used to convert the source to 1&apos;s and 0&apos;s and how they are compressed),The method used for encoding is called the <span class="smaller-span">CODEC</span>
        short for code/decode <br>
        The second , You need to choose the container format for the media.
    </p>
@@ -494,7 +496,7 @@ CODE:
        <li>WEBM container + opus audio codec</li>
    </ul>
    <table>
-       <caption>Video support in desktop and mobile browsers (as of 2017)</caption>
+       <caption><span class="smaller-span" >Video support in desktop and mobile browsers (as of 2017)</span></caption>
        <tr class="border-remove-top">
            <th>Format</th>
            <th>Type</th>
@@ -558,7 +560,7 @@ CODE:
    </table><br>
 
    <table>
-    <caption> Audio support in current browsers (as of 2017)</caption>
+    <caption> <span class="smaller-span" >Audio support in current browsers (as of 2017)</span></caption>
        <tr>
            <th>Format</th>
            <th>Type</th>
@@ -721,7 +723,7 @@ CODE:
  </article>
 <article>
     <h3>Adding Text Tracks</h3>
-    <span>&lt;track&gt;...&lt;track&gt;- Adds Synchronized text to embedded media.</span>
+    <span class="medium-span">&lt;track&gt;...&lt;track&gt;- Adds Synchronized text to embedded media.</span>
     <p>
         When using audio or video, it is adviseable to adds a synchronized text with the timeline of the video or audio.
     </p>
@@ -738,7 +740,7 @@ CODE:
     </p>
     <ul>
         <li><p> src - to points to the text file.</p></li>
-        <li><p>kind - to specifies the type of text annotation you are providing, if kind is set to <span>subtitle</span>, you must also specify the language with the <span>srclang</span>attribute.</p></li>
+        <li><p>kind - to specifies the type of text annotation you are providing, if kind is set to <span class="smaller-span">subtitle</span>, you must also specify the language with the <span class="smaller-span">srclang</span>attribute.</p></li>
         <li><p>label - to provide a name for the track that can be used in the interface for selecting a particular track.</p></li>
         <li><p>default - marks a particular track as default and it may be used on only one trackk within a media element.</p></li>
     </ul>
@@ -786,8 +788,8 @@ label=&quot;sous-titres en francais&quot;&gt;
              <h3>Main content &lt;main&gt;...&lt;/main&gt;</h3>
              <p>The main element is used to specify the main part of the webpage of a particular section, The main element must be unique to the page or section and The W3C HTML specification states that pages should have one main section and it should not be nested with an article, aside, header, nav.</p>
              <h3>Section and Articles</h3>
-             <span>&lt;section&gt;...&lt;/section&gt; - Thematic group of content</span><br>
-            <span>&lt;article&gt;&lt;/article&gt;- Self-contained, reusable compostion.</span>
+             <span class="medium-span">&lt;section&gt;...&lt;/section&gt; - Thematic group of content</span><br>
+            <span class="medium-span">&lt;article&gt;&lt;/article&gt;- Self-contained, reusable compostion.</span>
              <p>Long document are eaiser to use if they are divided into smaller parts For example, Books are divided into chapters. To divide long web documents in thematic sections use the section element<br>
                 Section element might contain an heading and other content that has a meaningful reason being grouped together.<br>
                 Use article elements for self-contained works that could stand alone, it is much useful for newpaper articles, blogposts, comments.
@@ -854,5 +856,6 @@ label=&quot;sous-titres en francais&quot;&gt;
 </div>
     </footer>
     <script src="JS/Script.js"></script>
+</script>
 </body>
 </html>
