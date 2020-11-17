@@ -478,6 +478,8 @@ img[src="IMG/codeclan.svg"]{
     .main-content{
          text-align: unset;
          font-size: 120%;
+         box-sizing: border-box;
+         width: 100%;
     }
     pre em{
         font: size 10%;
