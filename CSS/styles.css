@@ -76,16 +76,22 @@ display: block;
     display: none;
 }
 /* STYLES FOR THE ASIDE NAVIAGATION FOR EASY ACCESS TO THE LEARNHTML PAGE*/
-aside{
+/*#aside{
     margin:0;
-   /* background-color: rgb(140,80, 120);*/
+   /* background-color: rgb(140,80, 120);*
    background-color:rgb(200,204,255);
    background-color:rgba(180, 204, 180, .5);
+   
+}*/
+#special-aside{
+    background-color:rgba(180, 204, 180, .5);
 }
 #HTML-nav{
     margin: 0;
-  /* background-color: rgb(200,204,255);*/
+    display: block;
+    background-color:rgba(180, 204, 180, .5);
 }
+
 #HTML-nav a.closebtn{
     display:none;
 }
@@ -94,7 +100,7 @@ aside{
     overflow: hidden;
    /* position: fixed;*/
 }
-#HTML-nav a.icon{
+ a.icon{
     display: none;
 }
 #HTML-nav li{
@@ -251,10 +257,11 @@ text-decoration: none;
     font-size: medium;
     text-align: center;
     font-style: italic;
+    font-size: 80%;
 }
 .blockquote-blue{
     background-color:#fafafa;
-    color:#40ecff;
+    color: rgb(26,169,217);
     font-size: 120%;
     font-style: italic;
     padding: 10px;
@@ -264,6 +271,10 @@ text-decoration: none;
     border-bottom: inset tomato 1px;
    border-right:inset tomato 2px ;*/
    box-shadow: 6px 6px 10px gray;
+}
+.illustrationTable td .illustrationTable th{
+    border: none;
+    border-bottom:0;
 }
 th,td,table{
     /*border: 1px solid black;*/
@@ -285,6 +296,11 @@ td:last-child{
 }
 th:last-child{
     border-right: 0;
+}
+.table-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: wrap;
 }
 img[src="IMG/HTML-Anatomy.png"]{
    border: 10px solid tomato;
@@ -320,7 +336,7 @@ textarea{
     border-radius: 5px;
 }
 textarea:focus{
-    border: 3px solid salmon;
+    border: 3px solid  rgb(26,169,217);
 }
 fieldset{
     box-sizing: border-box;
@@ -333,7 +349,7 @@ fieldset{
 }
 fieldset legend{
     text-align: center;
-    color: chocolate;
+    color: rgb(26,169,217);
     font-weight: bolder;
     font-size: 120%;
 }
@@ -352,13 +368,13 @@ button{
         margin-left:120px;       
 }
 button:focus , button:hover{
-    color: dodgerblue;
-    background:#1f917e;
+    background: rgba(26,169,217,.1);
+    color: rgb(23, 191, 166);
     font-weight: bold;
 }
 button:active{
     color: dodgerblue;
-    background:#2ceef5;
+    background: rgba(26,169,217,.45);
 }
 input{
     width:400px;
@@ -372,7 +388,7 @@ input{
 
 }
 input:focus{
-    border: 3px solid salmon;
+    border: 3px solid rgb(26,169,217);
 }
 .form-grid{
     display: grid;
@@ -396,22 +412,37 @@ form /*+ section*/{
 }
 /*END OF STYLES FOR FORM AND FOOTER RELATED STYLES*/
 /* BASIC STYLES FOR THE HOME PAGE DESIGN */
+.LinkMore{
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(26,169,217);
+}
+.LinkMore:visited{
+    color: rgba(26,169,217,.3) ;
+}
+.LinkMore:focus , .LinkMore:active{
+ color: rgba(26,169,217,.7) ;
+}
 .Home-description p ,.CSS-description p{
     border: 2px solid black;
     text-align: center;
     width: 500px;
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
     box-shadow: 6px 6px 10px gray;
     margin-bottom: 20px;
-    color: cornflowerblue;
+    color: black;
+    font-size: 90%;
+}
+.Home-description .paraHosting{
+    font-size: 85%;
 }
 .Home-description img{
     float: left;
-    margin-left:10% ;
+    margin:4% 4% 4%;
    /* margin-left: 180px;*/
    width: 200px;
-   height: 200px;
+   height: auto;
 }
 .CSS-description img{
     float: right;
@@ -444,7 +475,7 @@ img[src="IMG/codeclan.svg"]{
 }
 
 /*STYLES FOR SMALLER DEVICES*/
-@media screen and (max-width:768px) {
+@media(max-width:768px) {
     header{
         margin: 0;
         /*background-color: #66c5e8;*/
@@ -456,10 +487,7 @@ img[src="IMG/codeclan.svg"]{
     }
     header h1,header div span{
        /* color: black;*/
-        font-style: normal;
-        
-    }
-    #main-nav{
+        font-style: normal; 
     }
    .main-content h1{
       font-size: 150%;
@@ -479,7 +507,10 @@ img[src="IMG/codeclan.svg"]{
          text-align: unset;
          font-size: 120%;
          box-sizing: border-box;
-         width: 100%;
+        max-width: 100vh; 
+        /*width: 100%;*/
+         margin: 0;
+         display: block;
     }
     pre em{
         font: size 10%;
@@ -516,7 +547,7 @@ img[src="IMG/codeclan.svg"]{
         margin-left: 70px;
     }
     th,td,table{
-        font-size: 75%;
+        font-size: 72%;
     }
     #logo-section{
         display: none;
@@ -534,8 +565,8 @@ img[src="IMG/codeclan.svg"]{
         font-size: 85%;
         box-shadow: none;
         border-radius: 10px;
-        border-color: coral;
-        color: cornflowerblue;
+        border-color: rgb(26,169,217);
+        color: black;
 
     }
     .CSS-description p{
@@ -571,12 +602,12 @@ img[src="IMG/codeclan.svg"]{
     #main-nav #myLinks{
         display: none;
     }
-#main-nav a.icon{
+  #main-nav a.icon{
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-    color:rgba(180, 204, 180, .9); ;
+    color:rgba(180, 204, 180, .9); 
    }
    #main-nav a.icon:hover {
        background-color: black;
@@ -586,21 +617,29 @@ img[src="IMG/codeclan.svg"]{
    }
    #main-nav #myLinks li {
        display: block;
+       padding: 0;
+       margin-top: -10px;
    }
    #main-nav #myLinks a{
        width: 100%;
    }
-   #HTML-nav ul{
-    display: none;
-        }
-#HTML-nav a.icon{
+   
+    a.icon{
     display: inline;
 }
-   aside {
-    position: fixed;
+   /*aside {
     background-color:rgba(180, 204, 180, 1);
+   }*/
+   #mySidenav{
+       display: none;
    }
+.para-descr{
+    font-size: 90%;
 }
-
+p.codepen{
+    font-size: 90%;
+    margin: 1em;
+}
+}
 
     

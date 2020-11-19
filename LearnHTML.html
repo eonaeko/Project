@@ -15,7 +15,6 @@
          <h1>EMMAZ TECH</h1>
          <span>EXPLORING IT</span>
      </div>
-     
         <nav role="navigation" id="main-nav">
            <a href="javascript:void(0);" class="icon  myspecial" onclick="myFunction()">
                 <i class="fa fa-bars"></i></a>
@@ -32,11 +31,13 @@
     </header>
     <main>
         <div class="grid-cont">
-        <aside>
-            <nav id="HTML-nav" class="sidenav">
-                <a href="javascript:void(0);" class="icon  myspecial" onclick="Functionnew()">
+           
+        <!--<aside id="">-->
+            <div id=special-aside>
+                <a  href ="javascript:void(0);"class="icon  myspecial" onclick="Functionnew()">
                     <i class="fa fa-bars"></i></a>
-                <ul  id="mySidenav"> 
+            <nav id="HTML-nav" class="sidenav">
+                    <ul id="mySidenav"> 
                     <li><a href="#intro-HTML">What is HTML</a></li>
                     <li><a href="#HTML-HEADING">HTML Headings</a></li>
                     <li><a href="#HTML-PARAGRAPH">HTML Paragraphs</a></li>
@@ -49,8 +50,9 @@
                     <li><a href="#">Recommendations</a></li>
                 </ul>
             </nav>
+        </div>
             
-        </aside>
+       <!-- </aside>-->
        <div class="main-content">
        <section id="intro-HTML">
         <h1>what is HTML??</h1>
@@ -305,7 +307,7 @@
                <h5>Linking to a Lower Directory</h5>
                <p>
                    When linking to a lower directory, you are require to include the directory of the file
-                 <em class="para-descr">FOR EXAMPLE:
+                 <em class="para-descr">FOR EXAMPLE:<br>
                    <span><code>&lt;a href=&quot;Cars/Toyota.html&quot;&gt;Toyota&lt;/a&gt;</code></span></em>  
                 The directory named Cars must be in a lower directory to the current working document, if the directory are two steps away from the working document, you have to tells to go down 
                 two directory to the actual file by listing the URL of the directory out by seperating with a forward slash(/)
@@ -380,7 +382,7 @@
           All content in the table must go within either the  <span class="smaller-span">th</span> element or  <span class="smaller-span">td</span> element, they could contain any type of content like text, image and so on.
       </p>
       <p>
-          <em class="para-descr">The table is a three rows and three columns to show the default style of a table and struture:</em>
+          <em class="para-descr">The table is a three rows and three columns to show  a table and struture(Note:The table has styled through css for better view):</em>
           <div>
 <pre>
 CODE:
@@ -402,10 +404,29 @@ CODE:
 &lt;/tr&gt;
 &lt;/table&gt;
 </pre>
-              <em>
+              <!--<em>
                 OUTPUT:<br>   
               <img src="IMG/table_Annotation.png" alt="ILLUSTRATON SHOWING A THREE ROW AND THREE COLUMN TABLE AND IT'S DEFAULT STYLE">
-              </em>
+              </em>-->
+              <em>Output:</em>
+<table class= "illustrationTable">
+  <tr>
+      <th>Name </th>
+      <th>Occupation</th>
+      <th>Organisation</th>
+  </tr>
+  <tr>
+      <td>Bukola Opade</td> 
+      <td>Full-stack Developer</td> 
+      <td>Oracle Academy</td> 
+  </tr>
+  <tr>
+  <td>Emmanuel Onaeko</td> 
+  <td>Front End Developer</td> 
+  <td>Emmaz Technologies</td> 
+</tr>
+</table>
+
           </div>
       </p>
       <h3>Table Header &lt;th&gt;...&lt;/th&gt;</h3>
@@ -495,9 +516,9 @@ CODE:
        <li>WEBM container + vorbis audio codec</li> 
        <li>WEBM container + opus audio codec</li>
    </ul>
-   <table>
+   <table class="table-flex">
        <caption><span class="smaller-span" >Video support in desktop and mobile browsers (as of 2017)</span></caption>
-       <tr class="border-remove-top">
+       <tr>
            <th>Format</th>
            <th>Type</th>
            <th>IE</th>
@@ -559,7 +580,7 @@ CODE:
        </tr>
    </table><br>
 
-   <table>
+   <table id="table-remove">
     <caption> <span class="smaller-span" >Audio support in current browsers (as of 2017)</span></caption>
        <tr>
            <th>Format</th>
@@ -655,7 +676,8 @@ CODE:
      <em class="">An example of video element struture:
          <pre>
  &lt;video src=&quot;light_reel.mp4&quot; width=&quot;640&quot; 
- height=&quot;480&quot; poster=&quotlight_reel.jpg&quot; controls 
+ height=&quot;480&quot;
+  poster=&quotlight_reel.jpg&quot; controls 
  autoplay&gt;...&lt;/video&gt;
  </pre>
          </em>
@@ -688,7 +710,8 @@ CODE:
     <p>
         Because it is much adviseable to specify different format and allow the browser to choose to avoid misfunctionality of the page, we could make use of the different source tag in the video element,<br>
         <em class="para=descr">
-         This example provides a video clip in the souped-up WebM/VP9 for,at for supporting browsers,as well as an MP4 and ogg Theora for other browsers:
+         This example provides a video clip in the souped-up WebM/VP9 for,at for supporting browsers,as well as an MP4 and ogg Theora for other
+          browsers:</em>
 <pre>
     CODE:
     &lt;video controls poster=&quot;clip.jpg&quot;&gt;
@@ -750,7 +773,8 @@ CODE:
     <pre>
 CODE:
 &lt;video width=&quot;640px&quot; height=&quot;320&quot; controls&gt;
-&lt;source src=&quot;indigenous_movie,mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;source src=&quot;indigenous_movie,mp4&quot; 
+type=&quot;video/mp4&quot;&gt;
 &lt;track src=&quot;english_subtitles.vtt&quot;
 kind=&quot;subtitles&quot;
 srclang=&quot;en&quot;
@@ -818,12 +842,12 @@ label=&quot;sous-titres en francais&quot;&gt;
         <form>
             <fieldset>
             <legend>Contact-us</legend>
-            <label for="Name"> NAME:</label><br>
-            <input type="text" name="" required id=Name><br>
-            <label for="form-subject">SUBJECT:</label><br>
-            <input type="text" name="" id="form-subject"><br>
-            <label for="form-review">WE want to hear from you<br>
-            <textarea name="" id="form-review"></textarea></label><br>
+           <!--<label for="Name"> NAME:</label><br>--> 
+            <input type="text" name="" required id=Name placeholder="NAME"><br>
+           <!-- <label for="form-subject">SUBJECT:</label><br>-->
+            <input type="text" name="" id="form-subject" placeholder="SUBJECT"><br>
+            <!--<label for="form-review">WE want to hear from you<br>-->
+            <textarea name="" id="form-review" placeholder="We want to hear from you"></textarea></label><br>
             <button>SUBMIT</button>
         </form>
     </fieldset>
