@@ -120,7 +120,7 @@ display: block;
      text-transform: uppercase;
 }
 #HTML-nav li a:link{
-    color:rgb(9, 75, 230)
+    color:rgb(9, 75, 230);
 }
 #HTML-nav li a:visited{
     color: rgb(23, 92, 138);
@@ -473,6 +473,9 @@ img[src="IMG/codeclan.svg"]{
     font-style: normal;
     font-weight: bolder;
 }
+.cheater-span , .sidenav{
+    display: none;
+}
 
 /*STYLES FOR SMALLER DEVICES*/
 @media(max-width:768px) {
@@ -505,12 +508,14 @@ img[src="IMG/codeclan.svg"]{
     }
     .main-content{
          text-align: unset;
-         font-size: 120%;
+         font-size: 100%;
          box-sizing: border-box;
         max-width: 100vh; 
         /*width: 100%;*/
-         margin: 0;
+         margin:0;
+         margin-left: 1em;
          display: block;
+         transition: margin-left .5s;
     }
     pre em{
         font: size 10%;
@@ -623,16 +628,57 @@ img[src="IMG/codeclan.svg"]{
    #main-nav #myLinks a{
        width: 100%;
    }
-   
+  #HTML-nav{
+      display: none;
+  }
     a.icon{
     display: inline;
 }
    /*aside {
     background-color:rgba(180, 204, 180, 1);
    }*/
-   #mySidenav{
-       display: none;
+   .cheater-span , .sidenav{
+    display: block;
+}
+   .cheater-span{
+    font-size:20px;
+    cursor:pointer;
+    position: fixed;
    }
+   .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgba(180, 204, 180, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(9, 75, 230);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav  a:visited{
+    color: rgb(23, 92, 138);
+  }
+  .sidenav  a:focus ,.sidenav a:hover, .sidenav  a:active {
+    color: #0732f2;
+   font-size: larger;
+  }
+   .sidenav  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 .para-descr{
     font-size: 90%;
 }

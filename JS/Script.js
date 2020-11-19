@@ -6,7 +6,7 @@
             x.style.display = "block";
           }
         }
-  function Functionnew() {
+  /*function Functionnew() {
     var mySidenav= document.getElementById("mySidenav")
     var y = document.getElementById("HTML-nav");
     var htmlNav= document.getElementById("ires-aside");
@@ -28,7 +28,7 @@
      y.style.fontSize="100%";
      //tableRemove.style.display="none";
     }
-  }
+  }*/
   /*function Createsidenav(){
     var mainContent = document.getElementsByClassName("HTML-nav");
     var gridCont = document.querySelector(".grid-cont");
@@ -36,3 +36,14 @@
     var htmlNav= document.getElementById("ires-aside");
     console.log(SideNav)
   }*/
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    //document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+   // document.getElementById("main").style.marginLeft= "1em";
+    document.body.style.backgroundColor = "white";
+  }

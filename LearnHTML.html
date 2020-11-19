@@ -34,10 +34,10 @@
            
         <!--<aside id="">-->
             <div id=special-aside>
-                <a  href ="javascript:void(0);"class="icon  myspecial" onclick="Functionnew()">
-                    <i class="fa fa-bars"></i></a>
-            <nav id="HTML-nav" class="sidenav">
-                    <ul id="mySidenav"> 
+                <!--<a  href ="javascript:void(0);"class="icon  myspecial" onclick="Functionnew()">
+                    <i class="fa fa-bars"></i></a>-->
+            <nav id="HTML-nav">
+                    <ul> 
                     <li><a href="#intro-HTML">What is HTML</a></li>
                     <li><a href="#HTML-HEADING">HTML Headings</a></li>
                     <li><a href="#HTML-PARAGRAPH">HTML Paragraphs</a></li>
@@ -50,10 +50,27 @@
                     <li><a href="#">Recommendations</a></li>
                 </ul>
             </nav>
+            <span  class="cheater-span" onclick="openNav()">&#9776;</span>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#intro-HTML">What is HTML</a>
+                <a href="#HTML-HEADING">HTML Headings</a>
+                <a href="#HTML-PARAGRAPH">HTML Paragraphs</a>
+                <a href="#HTML-lists">HTML List</a>
+                <a href="#HTML-Link">HTML Link</a>
+                <a href="#HTML-IMAGES">HTML Images</a>
+                <a href="#HTML-TABLES">HTML Table</a>
+                <a href="#HTML-MULTIMEDIA">HTML Multimedia</a>
+                <a href="#HTML-SEMANTIC">HTML Sematic Tags</a>
+                <a href="#">Recommendations</a>
+            </div>
+            
+              </div>
         </div>
+        
             
        <!-- </aside>-->
-       <div class="main-content">
+       <div class="main-content" id =main>
        <section id="intro-HTML">
         <h1>what is HTML??</h1>
        <p>
@@ -80,16 +97,16 @@
      <article>
          <h2>Basic Document Structure</h2>
          <pre>
-         &lt;!DOCTYPE html&gt;
-         &lt;html&gt;
-           &lt;head&gt;
-              &lt;meta charset=&quot;UTF-8&quot;&gt;
-              &lt;title&gt;Title Here&lt;/title&gt;
-           &lt;/head&gt;
-           &lt;body&gt;
-           CONTENTS GOES HERE
-           &lt;/body&gt;
-        &lt;/html&gt;
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Title Here&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    CONTENTS GOES HERE
+    &lt;/body&gt;
+    &lt;/html&gt;
         </pre>
         <p>
             The First line in this example is called <span class="smaller-span">DOCTYPE DECLARATION </span>OR DOCUMENT TYPE DECLARATION, It is used to communicate
@@ -145,13 +162,13 @@
         </p>
         <div class=special-description>
     <pre>
-    <em>CODE:</em>
-    &lt;h1&gt;THIS IS HEADING LEVEL 0NE&lt;/h1&gt;
-    &lt;h2&gt;THIS IS HEADING LEVEL TWO&lt;/h2&gt;
-    &lt;h3&gt;THIS IS HEADING LEVEL THREE&lt;/h3&gt;
-    &lt;h4&gt;THIS IS HEADING LEVEL FOUR&lt;/h4&gt;
-    &lt;h5&gt;THIS IS HEADING LEVEL FIVE&lt;/h5&gt;
-    &lt;h6&gt;THIS IS HEADING LEVEL SIX&lt;/h6&gt;
+<em>CODE:</em>
+&lt;h1&gt;THIS IS HEADING LEVEL 0NE&lt;/h1&gt;
+&lt;h2&gt;THIS IS HEADING LEVEL TWO&lt;/h2&gt;
+&lt;h3&gt;THIS IS HEADING LEVEL THREE&lt;/h3&gt;
+&lt;h4&gt;THIS IS HEADING LEVEL FOUR&lt;/h4&gt;
+&lt;h5&gt;THIS IS HEADING LEVEL FIVE&lt;/h5&gt;
+&lt;h6&gt;THIS IS HEADING LEVEL SIX&lt;/h6&gt;
 </pre>
         <em>OUTPUT:
             <img src="IMG/headinglevelrep.png" alt="An output showing different heading levels"></em>
@@ -199,12 +216,12 @@
            <div class="special-description">
 <pre>
     <em>CODE:</em>
-    &lt;ul&gt;
-        &lt;li&gt;Toyota&lt;/li&gt;
-        &lt;li&gt;Mazda&lt;/li&gt;
-        &lt;li&gt;Ford&lt;/li&gt;
-        &lt;li&gt;Nissan&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;ul&gt;
+    &lt;li&gt;Toyota&lt;/li&gt;
+    &lt;li&gt;Mazda&lt;/li&gt;
+    &lt;li&gt;Ford&lt;/li&gt;
+    &lt;li&gt;Nissan&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
             <em>
             OUTPUT:
@@ -222,12 +239,12 @@
            <div class="special-description">
 <pre>
     <em>CODE:</em>
-    &lt;ol&gt;
-        &lt;li&gt;Toyota&lt;/li&gt;
-        &lt;li&gt;Mazda&lt;/li&gt;
-        &lt;li&gt;Ford&lt;/li&gt;
-        &lt;h4&gt;Nissan&lt;/li&gt;
-    &lt;/ol&gt;
+&lt;ol&gt;
+    &lt;li&gt;Toyota&lt;/li&gt;
+    &lt;li&gt;Mazda&lt;/li&gt;
+    &lt;li&gt;Ford&lt;/li&gt;
+    &lt;h4&gt;Nissan&lt;/li&gt;
+&lt;/ol&gt;
 </pre>
             <em>
             OUTPUT:
@@ -250,14 +267,14 @@
 <pre>
     <em>CODE:</em>
 &lt;dl&gt;
-        &lt;dt&gt;Serif examples&lt;/dt&gt;
-        &lt;dd&gt;Baskervile&lt;/dd&gt;
-        &lt;dd&gt;Goudy&lt;/dd&gt;
-        &lt;dt&gt;Sans-serif examples&lt;/dt&gt;
-        &lt;dd&gt;Helvetica&lt;/dd&gt;
-        &lt;dd&gt;Futura&lt;/dd&gt;
-        &lt;dd&gt;Avenir&lt;/dd&gt;
-    &lt;/dl&gt;
+    &lt;dt&gt;Serif examples&lt;/dt&gt;
+    &lt;dd&gt;Baskervile&lt;/dd&gt;
+    &lt;dd&gt;Goudy&lt;/dd&gt;
+    &lt;dt&gt;Sans-serif examples&lt;/dt&gt;
+    &lt;dd&gt;Helvetica&lt;/dd&gt;
+    &lt;dd&gt;Futura&lt;/dd&gt;
+    &lt;dd&gt;Avenir&lt;/dd&gt;
+ &lt;/dl&gt;
 </pre>
              <em>
              OUTPUT:
@@ -387,20 +404,20 @@
 <pre>
 CODE:
 &lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Name &lt;/th&gt;
-        &lt;th&gt;Occupation&lt;/th&gt;
-        &lt;th&gt;Organisation&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Bukola Opade&lt;/td&gt; 
-        &lt;td&gt;Full-stack Developer&lt;/td&gt; 
-        &lt;td&gt;Oracle Academy&lt;/td&gt; 
-    &lt;/tr&gt;
-    &lt;tr&gt;
-    &lt;td&gt;Emmanuel Onaeko&lt;/td&gt; 
-    &lt;td&gt;Front End Developer&lt;/td&gt; 
-    &lt;td&gt;Emmaz Technologies&lt;/td&gt; 
+&lt;tr&gt;
+    &lt;th&gt;Name &lt;/th&gt;
+    &lt;th&gt;Occupation&lt;/th&gt;
+    &lt;th&gt;Organisation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Bukola Opade&lt;/td&gt; 
+    &lt;td&gt;Full-stack Developer&lt;/td&gt; 
+    &lt;td&gt;Oracle Academy&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emmanuel Onaeko&lt;/td&gt; 
+&lt;td&gt;Front End Developer&lt;/td&gt; 
+&lt;td&gt;Emmaz Technologies&lt;/td&gt; 
 &lt;/tr&gt;
 &lt;/table&gt;
 </pre>
@@ -444,16 +461,16 @@ CODE:
 <em class="para-descr">The table shows an example of column spans:</em>
 <div>
 <pre>
-    CODE:
-    &lt;table&gt;
-        &lt;tr&gt;
-        &lt;th colspan=&quot;2&quot;&gt;FAT &lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-        &lt;td&gt;Occupation&lt;/td&gt;
-        &lt;td&gt;Organisation&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;/tablé&gt
+CODE:
+&lt;table&gt;
+    &lt;tr&gt;
+    &lt;th colspan=&quot;2&quot;&gt;FAT &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Occupation&lt;/td&gt;
+    &lt;td&gt;Organisation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
 </pre>
     <em>
         OUTPUT:<br>   
@@ -467,21 +484,21 @@ CODE:
 <em class="para-descr">The table shows an example of column spans:</em>
 <div>
 <pre>
-    CODE:
-    &lt;table&gt;
-        &lt;tr&gt;
-        &lt;th rowspan=&quot;3&quot;&gt;FRUIT &lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-        &lt;td&gt;Apples&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-        &lt;td&gtPineapple&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-        &lt;td&gt;Bananass&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt
+CODE:
+&lt;table&gt;
+    &lt;tr&gt;
+    &lt;th rowspan=&quot;3&quot;&gt;FRUIT &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Apples&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gtPineapple&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Bananass&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt
 </pre>
     <em>
         OUTPUT:<br>   
@@ -675,10 +692,10 @@ CODE:
      </p>
      <em class="">An example of video element struture:
          <pre>
- &lt;video src=&quot;light_reel.mp4&quot; width=&quot;640&quot; 
- height=&quot;480&quot;
-  poster=&quotlight_reel.jpg&quot; controls 
- autoplay&gt;...&lt;/video&gt;
+&lt;video src=&quot;light_reel.mp4&quot; width=&quot;640&quot; 
+height=&quot;480&quot;
+poster=&quotlight_reel.jpg&quot; controls 
+autoplay&gt;...&lt;/video&gt;
  </pre>
          </em>
     <p>Attributes in the example to take note</p>
@@ -713,12 +730,12 @@ CODE:
          This example provides a video clip in the souped-up WebM/VP9 for,at for supporting browsers,as well as an MP4 and ogg Theora for other
           browsers:</em>
 <pre>
-    CODE:
-    &lt;video controls poster=&quot;clip.jpg&quot;&gt;
-    &lt;source src=&quot;clip.webm&quot; type=&quot;video/webm&quot;
-    &lt;source src=&quot;clip.ogg&quot; type=&quot;video/ogg&quot;
-    &lt;source src=&quot;clip.mp4&quot; type=&quot;video/mp4&quot;
-    &lt;/video&gt;
+CODE:
+&lt;video controls poster=&quot;clip.jpg&quot;&gt;
+&lt;source src=&quot;clip.webm&quot; type=&quot;video/webm&quot;
+&lt;source src=&quot;clip.ogg&quot; type=&quot;video/ogg&quot;
+&lt;source src=&quot;clip.mp4&quot; type=&quot;video/mp4&quot;
+&lt;/video&gt;
 </pre>
         </em>
     </p>
@@ -736,9 +753,9 @@ CODE:
 <pre>
 CODE:
 &lt;audio controls&gt;
-    &lt;source src=&quot;song.webm&quot; type=&quot;audio/webm&quot;
-    &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;
-    &lt;source src=&quot;song.mp4&quot; type=&quot;audio/mp4&quot;
+&lt;source src=&quot;song.webm&quot; type=&quot;audio/webm&quot;
+&lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;
+&lt;source src=&quot;song.mp4&quot; type=&quot;audio/mp4&quot;
 &lt;/audio&gt;
 </pre>
            </em>
@@ -880,6 +897,5 @@ label=&quot;sous-titres en francais&quot;&gt;
 </div>
     </footer>
     <script src="JS/Script.js"></script>
-</script>
 </body>
 </html>
