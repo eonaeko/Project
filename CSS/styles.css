@@ -90,6 +90,7 @@ display: block;
     margin: 0;
     display: block;
     background-color:rgba(180, 204, 180, .5);
+    
 }
 
 #HTML-nav a.closebtn{
@@ -483,7 +484,8 @@ img[src="IMG/codeclan.svg"]{
         margin: 0;
         /*background-color: #66c5e8;*/
         width: 100%; 
-        height: 50%; 
+       /* height: 50%; */
+       height: auto;
     }
     header div{
         text-align: left;
@@ -583,7 +585,7 @@ img[src="IMG/codeclan.svg"]{
     }
     img[src="IMG/codeclan.svg"]{
         width: 100px;
-        height: 200px;
+        height: auto;
     }
     .codeclan{
         font-size: 90%;
@@ -637,6 +639,9 @@ img[src="IMG/codeclan.svg"]{
    /*aside {
     background-color:rgba(180, 204, 180, 1);
    }*/
+   .div-relative{
+       position: relative;
+   }
    .cheater-span , .sidenav{
     display: block;
 }
@@ -648,9 +653,9 @@ img[src="IMG/codeclan.svg"]{
    .sidenav {
     height: 100%;
     width: 0;
-    position: fixed;
+   position: fixed;
     z-index: 1;
-    top: 0;
+    top: ;
     left: 0;
     background-color:rgba(180, 204, 180, 1);
     overflow-x: hidden;
@@ -686,6 +691,15 @@ p.codepen{
     font-size: 90%;
     margin: 1em;
 }
+i.fa-plus{
+    background-color: black;
+    color: #fafafa;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
 }
 
     

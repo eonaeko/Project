@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <header id="Header-Nav" class="sticky">
         <div>
          <h1>EMMAZ TECH</h1>
          <span>EXPLORING IT</span>
@@ -50,7 +50,9 @@
                     <li><a href="#">Recommendations</a></li>
                 </ul>
             </nav>
-            <span  class="cheater-span" onclick="openNav()">&#9776;</span>
+            <div class="div-relative">
+            <span  class="cheater-span" onclick="openNav()"><i class="fa fa-plus" aria-hidden="true"></i>
+            </span>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#intro-HTML">What is HTML</a>
@@ -64,9 +66,9 @@
                 <a href="#HTML-SEMANTIC">HTML Sematic Tags</a>
                 <a href="#">Recommendations</a>
             </div>
-            
               </div>
-        </div>
+            </div>
+        
         
             
        <!-- </aside>-->
@@ -856,7 +858,7 @@ label=&quot;sous-titres en francais&quot;&gt;
     <footer>
        <p class="footer-text-center"> &copy; Copyright 2020 Designed  by Emmanuel Onaeko</p>
        <div class="form-grid">
-        <form>
+       <form>
             <fieldset>
             <legend>Contact-us</legend>
            <!--<label for="Name"> NAME:</label><br>--> 
