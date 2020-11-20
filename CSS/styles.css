@@ -1,20 +1,27 @@
 body{
+    /* Intializes of all margin and padding to zero on the page*/
     margin:0;
     padding:0;
-    background-color: #fafafa;
-    
+    background-color: #fafafa; 
+}
+h1{
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
 }
 /*STYLES MEANT FOR THE HEADER SECTION + THE MAIN NAVIAGATION OF THE PAGE */
 header{
     line-height: 1.6em;
     margin: 0;
     width:100%;
-    height: 300px;
+    height: 200px;
     background-color: #66c5e8;
     background-image: url(../IMG/Code_scree.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    /*position: sticky;
+    top: 0;*/
 }
 header div{
    /* float: left; */
@@ -35,11 +42,6 @@ header div span{
     letter-spacing: .2em;
     color: rgba(24,255,180, .9);
     font-size: 1em;
-}
-h1{
-    margin: 0;
-    padding: 0;
-    padding-top: 5px;
 }
 #main-nav{
 display: block;
@@ -84,25 +86,18 @@ display: block;
    
 }*/
 #special-aside{
-    background-color:rgba(180, 204, 180, .5);
+   background-color:rgba(180, 204, 180, .5);
 }
 #HTML-nav{
-    margin: 0;
     display: block;
-    background-color:rgba(180, 204, 180, .5);
-    
+    /*background-color:rgba(180, 204, 180, .5);*/
 }
-
 #HTML-nav a.closebtn{
     display:none;
 }
 #HTML-nav ul{
     height: 100vh;
     overflow: hidden;
-   /* position: fixed;*/
-}
- a.icon{
-    display: none;
 }
 #HTML-nav li{
     margin: -12px;
@@ -137,8 +132,7 @@ iframe{
 }
 /* STYLES FOR MAJOR CONTENT OF THE PAGES*/
 .main-content{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
     line-height: 1.6em;
     font-size: 130%;
     font-weight: 500;
@@ -152,6 +146,7 @@ iframe{
 }
 .main-content h1{
     font-size: 2.5em;
+    letter-spacing: .2em;
 }
 .main-content span {
     font-size: 130%;
@@ -170,10 +165,10 @@ iframe{
 .main-content h3{
     margin-left: 10px;
     font-family: 'Roboto Mono', monospace, serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .main-content h3~p{
-    margin-left: 15px;
+  /*  margin-left: 15px;*/
 }
 p.codepen{
     margin: 0;
@@ -307,7 +302,10 @@ img[src="IMG/HTML-Anatomy.png"]{
    border: 10px solid tomato;
    border-radius: 12px;
 }
-/* STYLES FOR THE FOOTER AND FORM-RELATED */
+
+
+/* STYLES FOR THE FOOTER AND FORM-RELATED  
+These styles are used to style the look for both the footer and form */
 footer{
     background-color: #66c5e8;
     background-color:rgba(180, 204, 180,.5);
@@ -329,6 +327,25 @@ footer p{
     color: #48a9cf;
     text-decoration: none;
     font-size: 80%;
+}
+form /*+ section*/{
+    box-sizing: border-box;
+    border-right: 2px solid black;
+    padding: .5em;
+    margin: 1em;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.form-contact-image img{
+    width: 30px;
+    height: 30px;
+    margin: 2%;
+}
+.form-contact-image a:focus img, .form-contact-image a:hover img,.form-contact-image a:active img {
+    background-color:rgb(170,204,255);
+    text-decoration: none;
 }
 textarea{
     width: 400px;
@@ -391,25 +408,8 @@ input{
 input:focus{
     border: 3px solid rgb(26,169,217);
 }
-.form-grid{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-form /*+ section*/{
-    box-sizing: border-box;
-    border-right: 2px solid black;
-    padding: .5em;
-    margin: 1em;
-}
-.form-contact-image img{
-    width: 30px;
-    height: 30px;
-    margin: 2%;
-}
-.form-contact-image a:focus img, .form-contact-image a:hover img,.form-contact-image a:active img {
-    background-color:rgb(170,204,255);
-    text-decoration: none;
-}
+
+
 /*END OF STYLES FOR FORM AND FOOTER RELATED STYLES*/
 /* BASIC STYLES FOR THE HOME PAGE DESIGN */
 .LinkMore{
@@ -484,6 +484,7 @@ img[src="IMG/codeclan.svg"]{
 }
 /* STYLES FOR SCREEN OF 696PX TO 991PX THIS IS MAINLY FOR TABLET PHONE 
  REARRANGEMENT IS BEEN DONE
+ ALL STYLES HERE WOULD ONLY ON THAT SCREEN RANGE
 */
 @media(min-width:696px) and (max-width:991px){
     header{
@@ -574,20 +575,23 @@ img[src="IMG/codeclan.svg"]{
         margin-left: 70px;
     }
 }
+/*END OF TABLET VERSION STYLES*/
 
-/*STYLES FOR SMALLER DEVICES*/
+/*STYLES FOR SMALLER DEVICES 
+MAJORLY DEVICES LIKES PHONES..*/
 @media(max-width:695px) {
-    header{
+    .smaller-header{
         margin: 0;
         /*background-color: #66c5e8;*/
+        display: block !important;
         width: 100%; 
        /* height: 50%; */
-       height: auto;
+       height:auto !important;
     }
-    header div{
-        text-align: left;
+ .smaller-header div{
+        text-align: center !important;
     }
-    header h1,header div span{
+    .smaller-header h1,.smaller-header div span{
        /* color: black;*/
         font-style: normal; 
     }
@@ -624,7 +628,7 @@ img[src="IMG/codeclan.svg"]{
         grid-template-columns: .1fr;
     }
     iframe{
-     margin: 0;
+     margin: 1em 0 0 0;
     }
     .form-grid{
         display: grid;
@@ -815,5 +819,6 @@ i.fa-plus{
       font-size: 80%;
   }
 }
+/*END OF STYLES FOR PHONE SCREEN SIZES*/
 
     
