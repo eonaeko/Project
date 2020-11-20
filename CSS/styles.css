@@ -706,7 +706,8 @@ img[src="IMG/codeclan.svg"]{
         font-size: 90%;
     }
     .about-me{
-        font-size:70%
+        font-size:95%;
+        font-weight: 600;
     }
     img[src="IMG/MyImage.JPG"]{
         width: 100px;
@@ -805,6 +806,13 @@ i.fa-plus{
     position: sticky;
     top: 0;
     width: 100%;
+  }
+  img[src="IMG/MyImage.JPG"]{
+      height: 350px;
+  }
+  p.about-me{
+      height:350px;
+      font-size: 80%;
   }
 }
 
