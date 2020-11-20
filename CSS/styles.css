@@ -426,14 +426,20 @@ form /*+ section*/{
 }
 .Home-description p ,.CSS-description p{
     border: 2px solid black;
-    text-align: center;
+    text-align:center;
     width: 500px;
-    height: 250px;
+    height: 300px;
     margin: 0 auto;
+
     box-shadow: 6px 6px 10px gray;
     margin-bottom: 20px;
     color: black;
     font-size: 90%;
+    font-weight: 800;
+}
+.CSS-description p{
+    text-align: left;
+    padding-left: 10px;
 }
 .Home-description .paraHosting{
     font-size: 85%;
@@ -477,9 +483,101 @@ img[src="IMG/codeclan.svg"]{
 .cheater-span , .sidenav{
     display: none;
 }
+/* STYLES FOR SCREEN OF 696PX TO 991PX THIS IS MAINLY FOR TABLET PHONE 
+ REARRANGEMENT IS BEEN DONE
+*/
+@media(min-width:696px) and (max-width:991px){
+    header{
+        max-width: 100%;
+    }
+    #main-nav  a {
+ font-size: 90%;
+ margin: .25em;
+    }
+    #HTML-nav li {
+        margin-left: -24px;
+    }
+    #HTML-nav li a{
+        font-size: 80%;
+    }
+    #HTML-nav li a:focus, #HTML-nav li a:hover, #HTML-nav li a:active{
+        font-size: 90%;
+    }
+    .grid-cont{
+        display: grid;
+        grid-template-columns: 25% 60% 15%;
+        box-sizing: border-box;
+    }
+    .special-grid{
+        grid-template-columns: 85% 15%;
+    }
+    .special-description{
+        display: grid;
+        grid-template-columns: .1fr;
+        margin: 0;
+    }
+    .hosting h1{
+        font-size: 150%;
+    }
+    p.codepen{
+        font-size: 115%;
+    }
+
+    .Home-description p ,.CSS-description p{
+        height: 250px;
+        font-size: 108% !important;
+        color: black;
+        font-weight: 800;
+    }
+    th,td,table{
+        font-size: 72%;
+    }
+    #Anatomy{
+        display: none;
+    }
+    .main-content{
+        font-size:100%;
+    }
+    #logo-section .contact-image{
+        width: 30px;
+        height: 30px;
+    }
+    form{
+        border: none;
+        border-right: 2px solid black;
+        margin: 0 auto;
+    
+    }
+    .form-contact-image{
+        margin-left: 1.5em;
+    } 
+    p.footer-final-note{
+        font-size: 90%;
+        margin-left: 10px;
+    }
+#logo-section p{
+        font-size: 90%;
+    }
+    textarea{
+        width: 250px;
+        height: 200px;
+    }
+    fieldset{
+        box-sizing: border-box;
+        width: 50%;
+        height: 500px;
+        margin: 1.5em;
+    }
+    input{
+        width: 250px;
+    }
+    button{
+        margin-left: 70px;
+    }
+}
 
 /*STYLES FOR SMALLER DEVICES*/
-@media(max-width:768px) {
+@media(max-width:695px) {
     header{
         margin: 0;
         /*background-color: #66c5e8;*/
@@ -537,6 +635,7 @@ img[src="IMG/codeclan.svg"]{
         border: none;
         border-bottom: 2px solid black;
         margin: 0 auto;
+        overflow: hidden;
     }
     .form-contact-image{
         margin-left: 1.5em;
