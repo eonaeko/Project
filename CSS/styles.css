@@ -400,7 +400,6 @@ form /*+ section*/{
     border-right: 2px solid black;
     padding: .5em;
     margin: 1em;
-    position: relative;
 }
 .form-contact-image img{
     width: 30px;
@@ -776,6 +775,7 @@ img[src="IMG/codeclan.svg"]{
     color: rgb(9, 75, 230);
     display: block;
     transition: 0.3s;
+    font-size: 100%;
   }
   .sidenav  a:visited{
     color: rgb(23, 92, 138);
