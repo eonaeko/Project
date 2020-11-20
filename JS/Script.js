@@ -37,7 +37,7 @@ var myLinks = document.querySelector("#myLinks");
       headerBar.style.margin="0"
       myLinks.style.marginBottom="20px";
     } else{
-      headerNav.style.height ="200px"
+      headerNav.style.height ="auto"
       headerNav.style.display="block"
       headerH1.style.display ="block";
       headerH1.style.textAlign ="center";
