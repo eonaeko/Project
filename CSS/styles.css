@@ -536,7 +536,14 @@ img[src="IMG/codeclan.svg"]{
     form{
         border: none;
         border-bottom: 2px solid black;
-        margin: 0 auto;
+        margin: 0 4.5em;
+    }
+    .form-contact-image{
+        margin-left: 1.5em;
+    } 
+    p.footer-final-note{
+        font-size: 90%;
+        margin-left: 10px;
     }
     textarea{
         width: 250px;
