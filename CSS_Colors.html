@@ -27,21 +27,132 @@
                 <li><a href="codepen.html">Codepen</a></li>
                 <li><a href="AboutMe.html">About Me</a></li>
             </ul>
-            
         </nav>
     </header>
     <main>
-        <aside>
-            <nav id=HTML-nav>
-                <ul>
-                    <li><a href="#">CSS COLORS</a></li>
-                    <li><a href="#">CSS SELECTORS</a></li>
-                    <li><a href="#">DOM STRUTURE</a></li>
-                    <li><a href="#">THE BOX MODEL</a></li>
-                </ul>
-                    
-            </nav>
-        </aside>
+        <div class="grid-cont">
+        <div id=special-aside>
+        <nav id="HTML-nav">
+        <ul> 
+            <li><a href="#">CSS COLORS</a></li>
+            <li><a href="#">CSS SELECTORS</a></li>
+            <li><a href="#">DOM STRUTURE</a></li>
+            <li><a href="#">THE BOX MODEL</a></li>
+        </ul>
+        </nav>
+        <div class="div-relative">
+        <span  class="cheater-span" onclick="openNav()"><i class="fa fa-plus" aria-hidden="true"></i>
+        </span>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">CSS COLORS</a>
+            <a href="#">CSS SELECTORS</a>
+            <a href="#">DOM STRUTURE</a>
+            <a href="#">THE BOX MODEL</a>
+        </div><!--Div of id of mySidenav...-->
+          </div>
+        </div><!--End to the special aside-->
+        <div class="main-content" id =main>
+           <h1 id="css-h1">Cascading Stylesheets --CSS</h1>
+           <article id="CSS-intro">
+               <section>
+                <p>
+                    CSS is a language used to give styles to HTML documents, It handles the presentation of your webpage to users, it gives the developer a lot of power to determine how a particular HTML element is displayed to the users for example: the color of the element, it&apos;s background color, the spaces around the element to other element, it&apos;s border, the position it occupies and so on.<br>
+                    There have been different versions of CSS but the current version that web developers are using is <span class="smaller-span">CSS3</span>
+                </p>
+                <!--Remember to change of this section to act as a disclaimer.-->
+                <p>NOTE: we would be talking about the major concept of CSS and it&apos;s syntax and everything that gets you up and running with basic CSS from Applying CSS to your page, how to select elements, using of the id and class attributes, pseudo-elements, precedence,  inhertiance, CSS comments, CSS Box model but we won&apos;t really be introducing you to some other styles and not to worry, we would provide links to website that teaches them more verbose.</p>
+               </section>
+               <section>
+                   <h2>Writing the rules</h2>
+                   <p>A stylesheet is made up of one or more style instrutions <span class="medium-span">(called styles rules)</span> that is capable of defining how elements on the page is displayed.<br>
+                Every style rules in the stylesheet basically select this element and give it the following style to alter it&apos;s look.
+               In CSS, the two main sections on a rule are:<br><br>
+               <span class="medium-span"> The Selector:</span>  used to identifies the element or elements to be affected.<br>
+               <span class="medium-span"> The Declarations:</span> This provides the rules to be followed and displayed on the element selected. The declarations itself is made up of a property and its value which is seperated with a colon<span class="smaller-span">(:) </span>and a declaration is closed with a semi colon<span class="smaller-span">(;)</span>
+               <br> <code>p{color: red;}</code><br>
+               In the illustration above, this is interpreted as follows, the <span class="medium-span">p</span> is the selector which is used to selects paragraph tag in the document
+               <br> Every thing in the curly brackets<span class="medium-span">{ }</span> is referred to as the declaration while the property in this example is <span class="smaller-span">color</span> and the value is <span class="smaller-span">red</span><br>
+
+               We can have more than one declaration in those curly brackets and this time we would called a <span class="smaller-span">declaration block.</span>
+            </p>
+               </section>
+               <section>
+                   <h2>How to apply the css to the document</h2>
+                   <p>There are three way to apply CSS to your webpage:<br><br>
+                    <span class="medium-span">External Stylesheet:</span><br>
+                      An External stylesheet is a text-only file contained our css style rules in them, this file must always go with a <span class="medium-span">.css</span> suffix and they are not permiitted to contain any HTML tags.<br><br>
+                      The file can then to be used to style our HTML documents by linking it to our HTML file(using the link tag) or imported our HTML document.<br>
+                      External stylesheets are most preferred and most use out of the three other methods cause one css file can be used to style as many file as possible and they seperate your HTML code from presentational (CSS) code
+                   </p>
+                <h3>Using the link element to link css with HTML</h3>
+                <p>
+                The <span class="smaller-span">link</span> element defines a relationship between the current document and other resource, the <span class="smaller-span">link</span> goes within the <span class="smaller-span">head</span> element and must contains two attributes.
+                <br><br>
+                <span class="medium-span">rel=&quot;stylesheet&quot;</span><br>
+                The<span class="smaller-span">rel</span> attribute tells the browser that the type of relationship that the linked document has with the current document and with CSS, the value of the rel attribute for css is always stylesheet<br><br>
+               <span class="medium-span">href=&quot;url of css file &quot;</span><br>
+               The <span class="smaller-span">href</span> attribute is provides the location to the CSS file
+               <code class="no-center">
+            &lt;head&gt;<br>
+              <code class="txt-indent"> &lt;link rel=&quot;stylesheet&quot; href =&quot;style.css&quot;&gt;</code>
+            &lt;/head&gt;
+               </code>
+               This illustration above shows a css file named style.css that linked to an HTML documnet using the link element in the head element
+                </p>
+                <h3>Using @import to linked css with HTML</h3>
+                <p>
+                    You can also use the @import statement to provide the css file to HTML. if you use this method, you place your @import statement in a <span class="smaller-span">style</span> element.
+                <code class="no-center">&lt;head&gt;</code>
+                <code class="no-center txt-indent">&lt;style&gt;</code>
+                <code class="no-center txt-indent"> @import url(&quot;style.css&quot;);</code> 
+                <code class="no-center txt-indent">&lt;/style&gt;</code>
+                <code class="no-center">&lt;/head&gt;</code>
+
+                This method is not the most common but can be used if you want to import a particular screen sizes using some media queries along side with it.
+                
+            <br><br>
+            <span class="medium-span">Embedded Stylesheet:</span><br>
+            Embedded Stylesheets is used when the css styles rules are placed within the <span class="smaller-span">style</span> element in the <span class="smaller-span">head</span> but the downside of this is that it can only be on that particular document alone.
+            <code class="no-center">&lt;head&gt;</code>
+            <code class="no-center txt-indent">&lt;style&gt;</code>
+            <code class="no-center txt-indent">style rules go here</code> 
+            <code class="no-center txt-indent">&lt;/style&gt;</code>
+            <code class="no-center">&lt;/head&gt;</code>
+
+            <span class="medium-span">Inline Styles:</span><br>
+            Inline styles allow you to be able to apply properties and values to a single element by using the <span class="smaller-span">style</span> attribute in the element itself
+            
+            <code>&lt;h1 style = "color:red"&gt; heading one &lt;/h1&gt;</code>
+            To add multiple styles, seperate them with semi colons(;)
+            <code>&lt;h1 style = "color:red; font-size:120%;"&gt; heading one &lt;/h1&gt;</code>
+            Inline styles may come in handy if you want to override some other styles that have applied with exeternal or embedded stylesheets but Inline styles are highly problematic cause they interfere with content of the page and does should be avoided.
+        </p>
+               </section>
+               <section>
+                   <h2>CSS Comments</h2>
+                   <p>
+                       CSS allows for developers to leave comments in their code, this is highly helpful if you are collaborating with someone on a project or even if you are going to come back to the code latter and sometimes you can use to test different styles by commenting and uncommenting them as needed.<br><br>
+                       Content between<span class="medium-span"> /*</span> and <span class="medium-span">*/</span> will be ignored when stylesheets are parsed and you can leave  comments at anywhere in the code and they can span muitiple lines<br><br>
+
+                       <code>/*This is a comment and I am ignored <br>
+                    when stylesheets are parsed*/</code>
+                   </p>
+               </section>
+           </article>
+        </div><!--End of Main Content-->
+        <div id=logo-section>
+            <p>follow and subscribe to our social media &nbsp; contacts</p>
+            <a href="https://web.facebook.com/oladipupo.onaeko" target="_blank"><img src="IMG/facebook.svg" class="contact-image" alt="" ></a>
+            <a href="https://www.instagram.com/emmanueloladipupo483/?hl=en" target="_blank"><img src="IMG/instagram.svg" class="contact-image" alt=""></a>
+            <a href="https://github.com/eonaeko" target="_blank"><img src="IMG/github-icon.svg" class="contact-image" alt=""></a>
+            <a href="https://twitter.com/eonaeko778" target="_blank"><img src="IMG/twitter.svg" class="contact-image"alt=""></a>
+            <a href="https://www.linkedin.com/in/onaeko-emmanuel-1bab101a9/" target="_blank"><img src="IMG/linkedin.svg" class="contact-image"alt=""></a>
+            <a href="https://www.youtube.com/channel/UCKH_fa4fUdFJ2G3jsjUuFKA?view_as=subscriber" target="_blank"><img src="IMG/youtube.svg" class="contact-image" alt=""></a>
+        </div><!--End of logo-section 
+        This section contains the social media links -->
+
+    </div><!--End of grid-cont-->
     </main>
 
     <footer>

@@ -2,7 +2,7 @@ body{
     /* Intializes of all margin and padding to zero on the page*/
     margin:0;
     padding:0;
-    background-color: #fafafa; 
+    background-color: #e4e1e1;
 }
 h1{
     margin: 0;
@@ -14,7 +14,7 @@ header{
     line-height: 1.6em;
     margin: 0;
     width:100%;
-    height: 200px;
+    height: 180px;
     background-color: #66c5e8;
     background-image: url(../IMG/Code_scree.png);
     background-attachment: fixed;
@@ -22,20 +22,29 @@ header{
     background-size: cover;
     /*position: sticky;
     top: 0;*/
+    display: flex;
+    justify-content: space-around;
+
+    
 }
 header div{
    /* float: left; */
    text-align: center;
+   margin-left: 10px;
 }
 header  h1{
     font-family: 'Roboto Mono', monospace, serif;
     /*font-style: italic;*/
-    font-size: 2em;
+    font-size: 1.5em;
     word-spacing: .35em;
     color: rgba(24,255,180 , .9);
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
     
+    
+}
+#header-span{
+    color: #e4e1e1;
 }
 header div span{
     font-family: 'Roboto Mono', monospace, serif;
@@ -43,11 +52,15 @@ header div span{
     color: rgba(24,255,180, .9);
     font-size: 1em;
 }
+ header nav{
+    margin: 0 auto;
+}
 #main-nav{
 display: block;
+margin: 0;
 }
 #main-nav ul{
-    padding:15px;
+    padding:15px; 
 }
 #main-nav ul li, #main-nav a{
     list-style-type:none;
@@ -64,7 +77,8 @@ display: block;
     margin:10px;
     border-radius:10px ;
     color:#34ebb7;
-    background-color: #ffffff;
+    color: rgb(26,169,217);
+    background-color: #e4e1e1;
     /*background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,
     #d1d1d1 51%, #fefefe 100%);*/
 }
@@ -72,7 +86,9 @@ display: block;
     background-color:rgba(199, 235, 199, 1);
 }
 #main-nav .active{
-    background-color:rgba(124, 148, 124, .8);
+    background-color:rgba(124, 148, 124, 1);
+    /*background-color:rgba(24,255,180 , .1);*/
+    
 }
 #main-nav a.icon{
     display: none;
@@ -87,17 +103,20 @@ display: block;
 }*/
 #special-aside{
    background-color:rgba(180, 204, 180, .5);
+ 
 }
 #HTML-nav{
     display: block;
     /*background-color:rgba(180, 204, 180, .5);*/
+  
 }
 #HTML-nav a.closebtn{
-    display:none;
+   /* display:none;*/
 }
 #HTML-nav ul{
     height: 100vh;
     overflow: hidden;
+   position: fixed;
 }
 #HTML-nav li{
     margin: -12px;
@@ -116,13 +135,13 @@ display: block;
      text-transform: uppercase;
 }
 #HTML-nav li a:link{
-    color:rgb(9, 75, 230);
+    color:rgb(26,169,217);
 }
 #HTML-nav li a:visited{
-    color: rgb(23, 92, 138);
+    color: rgba(23, 92, 138,.9);
 }
 #HTML-nav li a:focus, #HTML-nav li a:hover, #HTML-nav li a:active{
-   color: #0732f2;
+   color: rgba(26,169,217,rgba(26,169,217,.7));
    font-size: larger;
 }
 iframe{
@@ -138,15 +157,31 @@ iframe{
     font-weight: 500;
     text-align: justify;
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: #fafafa;
+    font-family: 'Dosis', sans-serif;
+   
 }
 .main-content h1,.main-content h2{
     text-transform: uppercase;
     font-family:  'Roboto Mono', monospace, serif;
+   /* font-family: 'Noto Sans TC', sans-serif;*/
 }
 .main-content h1{
     font-size: 2.5em;
     letter-spacing: .2em;
+}
+h1#css-h1{
+    font-size: 150%;
+}
+code{
+    text-align: center;
+    display: block;
+}
+.no-center{
+    text-align: start;
+}
+.txt-indent{
+    text-align: start;
+    text-indent: 1em;
 }
 .main-content span {
     font-size: 130%;
@@ -188,7 +223,6 @@ p.codepen{
    /* grid-template-columns: 1.5fr 6fr 1fr;*/
    grid-template-columns: 20% 70% 10%;
     /*grid-template-rows: 2fr 5fr 2fr;"*/
-   /* margin-top:-15px ;  */
 }
 .special-grid{
     display: grid;
@@ -196,6 +230,9 @@ p.codepen{
 }
 .hosting{
     margin: 10px;
+}
+.hosting h1{
+    font-size: 135%;
 }
 .hosting-img{
     margin-right: -17.5px;
@@ -309,6 +346,7 @@ These styles are used to style the look for both the footer and form */
 footer{
     background-color: #66c5e8;
     background-color:rgba(180, 204, 180,.5);
+    /*background-color:  rgb(26,169,217);*/
     font-family: 'Roboto Mono', monospace, serif;
     margin-top: -15px;
 }
@@ -410,6 +448,7 @@ input:focus{
 }
 
 
+
 /*END OF STYLES FOR FORM AND FOOTER RELATED STYLES*/
 /* BASIC STYLES FOR THE HOME PAGE DESIGN */
 .LinkMore{
@@ -423,7 +462,7 @@ input:focus{
 .LinkMore:focus , .LinkMore:active{
  color: rgba(26,169,217,.7) ;
 }
-.Home-description p ,.CSS-description p{
+/*.Home-description p ,.CSS-description p{
     border: 2px solid black;
     text-align:center;
     width: 500px;
@@ -446,7 +485,7 @@ input:focus{
 .Home-description img{
     float: left;
     margin:4% 4% 4%;
-   /* margin-left: 180px;*/
+   /* margin-left: 180px;*
    width: 200px;
    height: auto;
 }
@@ -460,12 +499,40 @@ img[src="IMG/codeclan.svg"]{
     width: 200px;
     height: 100px;
     float: left;
+}*/
+.lang-border{
+    border: 3px solid;
+    border-color: rgb(26,169,217);
+    border-radius: 30px;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 20px;
 }
+.lang-border img {
+    margin-right: 20px;
+    width: 100px;
+}
+/*.lang-text {
+    margin-top: 11px;
+}
+
+.lang-main {
+    padding-bottom: 10px;
+}*/
+
 .codeclan{
-    margin: 1%;
-    font-size: 95%;
+   /* margin: 1%;
+  /*  font-size: 95%;*/
     font-family:'Roboto Mono', monospace, serif;
 }
+ img[ src="IMG/codepen.svg"], img[src="IMG/hosting.svg"] {
+  margin: 3em 0;
+ }
+ img[src="IMG/codeclan.svg"]{
+     margin: 1.5em 0;
+ }
+     
 .intro-Home-para{
     font-family:'Roboto Mono', monospace, serif ;
     font-size: 140%;
@@ -598,6 +665,9 @@ MAJORLY DEVICES LIKES PHONES..*/
    .main-content h1{
       font-size: 150%;
     }
+    h1#css-h1{
+        font-size: 135%;
+    }
    #Anatomy{
         display: none;
     }
@@ -675,7 +745,7 @@ MAJORLY DEVICES LIKES PHONES..*/
     .footer-final-note{
         margin: 0 auto;
     }
-    .Home-description p , .CSS-description p{
+    /*.Home-description p , .CSS-description p{
         width:50%;
         height:auto;
         font-size: 85%;
@@ -691,6 +761,14 @@ MAJORLY DEVICES LIKES PHONES..*/
     .Home-description img, .CSS-description img{
         width: 100px;
         height: 100px;
+    }*/
+    .lang-border{
+        display: block;
+        border-color: rgb(26,169,217);
+    }
+    .lang-border img {
+        display: block;
+        margin: 0 auto;
     }
     img[src="IMG/codeclan.svg"]{
         width: 100px;
@@ -731,6 +809,7 @@ MAJORLY DEVICES LIKES PHONES..*/
    }
    #main-nav #myLinks{
        background-color:rgba(180, 204, 180, .9);
+       background-color:rgba(180, 204, 180,.5);
    }
    #main-nav #myLinks li {
        display: block;
@@ -758,6 +837,7 @@ MAJORLY DEVICES LIKES PHONES..*/
    .cheater-span{
     font-size:20px;
     cursor:pointer;
+    margin-top: 10px;
     position: fixed;
    }
    .sidenav {

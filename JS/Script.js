@@ -2,8 +2,9 @@ window.onscroll = function(){StickyTopNav()};
 var headerNav = document.getElementById("Header-Nav");
 var headerStiff = headerNav.offsetTop; 
 var headerH1 = document.querySelector("#Header-Nav div");
-var headerBar = document.querySelector(" #main-nav");
+var headerBar = document.querySelector("#main-nav");
 var myLinks = document.querySelector("#myLinks");
+var gridCont = document.querySelector(".grid-cont");
   function myFunction() {
           var x = document.getElementById("myLinks");
           if (x.style.display === "block") {
@@ -24,22 +25,27 @@ var myLinks = document.querySelector("#myLinks");
   }
   
 
-  function StickyTopNav(){
+ function StickyTopNav(){
     if (window.pageYOffset >= headerStiff ) {
       headerNav.style.height="auto";
       headerNav.style.position="sticky";
       headerNav.style.top="0";
-      headerNav.style.display="flex"
-      headerH1.style.fontSize ="75%";
+     // headerNav.style.display="flex"
+     // headerH1.style.fontSize ="75%";
       headerH1.style.textAlign ="left";
       headerH1.style.marginTop ="20px";
       headerH1.style.marginRight ="10px";
       headerBar.style.margin="0"
-      myLinks.style.marginBottom="20px";
+      //myLinks.style.marginBottom="20px";
     } else{
       headerNav.style.height ="auto"
       headerNav.style.display="block"
       headerH1.style.display ="block";
       headerH1.style.textAlign ="center";
+      headerH1.style.fontSize ="110%";
+      headerH1.style.marginTop ="0";
+      headerH1.style.marginBottom ="1em";
+      gridCont.style.marginTop ="-17px"
     }
   }
+  
