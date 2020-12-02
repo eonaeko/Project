@@ -15,6 +15,7 @@ header{
     margin: 0;
     width:100%;
     height: 180px;
+    
     background-color: #66c5e8;
     background-image: url(../IMG/Code_scree.png);
     background-attachment: fixed;
@@ -24,11 +25,8 @@ header{
     top: 0;*/
     display: flex;
     justify-content: space-around;
-
-    
 }
 header div{
-   /* float: left; */
    text-align: center;
    margin-left: 10px;
 }
@@ -37,19 +35,14 @@ header  h1{
     /*font-style: italic;*/
     font-size: 1.5em;
     word-spacing: .35em;
-    color: rgba(24,255,180 , .9);
+    color:  rgb(26,169,217);
     margin-bottom: 5px;
-    margin-top: 20px;
-    
-    
+    margin-top: 20px   
 }
-#header-span{
-    color: #e4e1e1;
-}
-header div span{
+header div > span{
     font-family: 'Roboto Mono', monospace, serif;
     letter-spacing: .2em;
-    color: rgba(24,255,180, .9);
+    color:  rgb(26,169,217);
     font-size: 1em;
 }
  header nav{
@@ -164,6 +157,7 @@ iframe{
     text-transform: uppercase;
     font-family:  'Roboto Mono', monospace, serif;
    /* font-family: 'Noto Sans TC', sans-serif;*/
+   color: rgb(26,169,217);
 }
 .main-content h1{
     font-size: 2.5em;
@@ -175,6 +169,7 @@ h1#css-h1{
 code{
     text-align: center;
     display: block;
+    color: rgb(26,169,217);
 }
 .no-center{
     text-align: start;
@@ -183,10 +178,14 @@ code{
     text-align: start;
     text-indent: 1em;
 }
+.txt-indent2{
+    text-align: center;
+    text-indent: 2.5em;
+}
 .main-content span {
     font-size: 130%;
     font-style: italic;
-    color:green;
+    color:  rgb(26,169,217);
 }
 .main-content .medium-span{
     font-weight: bold;
@@ -201,6 +200,7 @@ code{
     margin-left: 10px;
     font-family: 'Roboto Mono', monospace, serif;
     text-transform: capitalize;
+     color: rgb(26,169,217);
 }
 .main-content h3~p{
   /*  margin-left: 15px;*/
@@ -271,6 +271,9 @@ text-decoration: none;
     display: grid;
     grid-template-columns: .1fr .1fr;
     margin: 0;
+}
+pre{
+    color:  rgba(26,169,217,.8);
 }
 .special-description pre{
     margin: 0;
@@ -900,5 +903,3 @@ i.fa-plus{
   }
 }
 /*END OF STYLES FOR PHONE SCREEN SIZES*/
-
-    

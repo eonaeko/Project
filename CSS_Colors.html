@@ -139,6 +139,105 @@
                     when stylesheets are parsed*/</code>
                    </p>
                </section>
+               <section>
+                   <h2>CSS Selectors</h2>
+                   <p>
+                       In understanding CSS, we must understand its syntax and also in understanding its syntax and using it to style our page, we most importantly need to understand what CSS selectors are and the different type of selectors there are and the ways of using them to style our page.<br>
+                       CSS selectors are used to select nodes/element from the DOM and thus styling them and there are a number of selectors and let jumpin to understanding them.<br><br>
+                       <span class="medium-span">Element Type selector: </span><br>
+                       The element type selector are the most basic and type of selector we are. for example: if we want to select paragraphs on our page and give them a color of blue, we can use the element selector<span class="smaller-span">(p)</span> and give a color of blue to them.
+                       <code>
+                           p {color: blue;}
+                       </code>
+                       This would go into the page then look for all elements that are paragraphs and give them color of blue.
+                   </p>
+                   <p>
+                       <span class="medium-span">Grouped Selectors:</span><br>
+                       Most times, we would want to apply same style to a couple of elements on our page, we could do this more efficiently by grouping our selectors in one style rule declaration by seperating them then with a comma<span class="smaller-span">(,)</span>
+                       <code>
+                           h1,h2,p,img{</code>
+                           <code class="txt-indent2">  margin:20px;</code>
+                         <code> }</code>
+                         This style rule above would apply a margin of 20px to all the element listed above <span class="smaller-span">(h1,h2,p,img)</span><br>
+                         When we use grouped selectors, it would make furture possible edits more efficient and less time consuming.
+                   </p>
+               </section>
+               <section>
+                   <h2>Contextual Selectors</h2>
+                   <p>In the DOM, we consists elements to be <span class="smaller-span">Parents</span> or <span class="smaller-span">Children</span> because some elements contains other elements while some elements are contained in other elements For example: The <span class="smaller-span">body</span> element can be considered as a <span class="smaller-span">parent</span> because
+                    it will contain other element that form the page and we could aslo consider the <span class="smaller-span">body</span> element as a <span class="smaller-span">child</span> cause it is contained in the <span class="smaller-span">html</span> element and this gives rise to other complex relationship between element.
+                   </p>
+                   <h3>Descendent Selectors</h3>
+                <p> Descendent Selectors targets element contained another element, Descendent selector is an example of a contextual selctors because it selects elements based on its context or relationship to another element.<br>
+                    Descendent selector are indicted in a list seperated by a character space
+                    <code>p em {
+                        font-size:120%
+                    }
+                    </code>
+                    This example targets emphasized text <span class="smaller-span">(em)</span> that are only contain in a paragraph <span class="smaller-span">(p)</span>, Other emphasized text contains in other element that not in the <span class="smaller-span">p</span> would not be affected.<br>
+                    Descendent selectors can be grouped in a comma-seperated list and it is possible to nest descendent selectors several layers deep.
+                    <code>
+                        ul li a {text-decoration: none;}
+                    </code>
+                    This example selects  an anchor<span class="smaller-span"> a</span> tags that are contained in a list-ltems<span class="smaller-span"> li</span> and in an unordered list<span class="smaller-span"> ul</span>
+                </p> 
+                <h3>Child Selectors</h3>
+                <p>Child selector is similar to descendent selector but child selector only selects direct children of a given element. They are indicated with a greater-than symbol<span class="smaller-span">(>)</span> and they are contextual selectors
+                 <code>
+                     p > em {font-size:120%;}
+                 </code>
+                 This example would select emphasized text that are only directly contained in a <span class="smaller-span">p</span> element.
+                </p>
+                <h3>Next-Sibling Selectors</h3>
+                <p>
+                    The next-sibling selector selects element that comes directly after another element with the same <span class="smaller-span">parent</span>. it is indicated with a plus <span class="smaller-span">(+)</span> sign 
+                    <code>h2+p{font-family:serif;}</code>
+                    This rule above would style paragraphs that follow an h2
+                </p>
+                <h3>Subsequent-sibling selectors</h3>
+                <p>The subsequent-sibling selector selects element that shares same <span class="smaller-span">parent</span> with the specified element and occurs after it in the source order, they need not follow each other directly it is indicated with a <span class="smaller-span">(~)</span> sign
+                <code>h1 ~ h2{font-weight:normal;}</code>
+                The following rule selects any <span class="smaller-span">h2</span> that both shares a parent element (such as <span class="smaller-span">section or article</span>) with an <span class="smaller-span">h1</span> appears after it in the document.
+                </p> 
+               </section>
+               <section>
+                   <h2>ID Selectors</h2>
+                   <p>
+                       We can assign Id attribute to element on our page and then access them in CSS to style them. The ID attribute is unique and should only be used once on our HTML page, ID selectors allow us to target elements with their ID values. The hash or pound <span class="smaller-span">(#)</span> symbol is used to identifed an id selectors in CSS we can use ID selectors as part of contextual selector
+                       <br><br>
+                       HTML Mark up
+                       <code class="no-center">&lt;p id=&quot;MyPara&quot;&gt;This is my first paragraphs&lt;/p&gt;</code>
+                       CSS
+                       <code class="no-center">#MyPara{</code>
+                        <code class="no-center">color:blue;<br>
+                        background-color:red<br>
+                       }</code>
+                       In the example above, we see how the id attribute was used in HTML markup which was later referced through its value with hash <span class="smaller-span">#</span> symbol to identify it as an ID selector and give the following style.
+                   </p>
+                   <h2>Class Selectors</h2>
+                   <p>
+                       We can group elements on our page into a conceptual group by using the class attribute and unlike ID attribute , different elements can shared same class name<br>
+                       To target elements belonging to the same class we use the class selector. Class selectors are indicated with a period <span class="smaller-span">(.)</span> at the beginning of the selector.
+                       <br><br>
+                       HTML markup
+                       <code class="no-center">&lt;p class=&quot;MyClass&quot;&gt;lovely&lt;/p&gt;</code>
+                       <code class="no-center">&lt;div class=&quot;MyClass&quot;&gt;I am learning CSS&lt;/div&gt;</code>
+                       CSS
+                       <code class="no-center">.MyClass {font-size: 1em;}</code>
+                       In the example above, different elements were grouped in a class called MyClass aand was access by CSS following the class name with a period <span class="smaller-span">(.)</span><br><br>
+                       We can also be more precise about what we want to styles with CSS
+                       <code>P.MyClass{color: red;}</code>
+                       This would style only paragraphs with the class of  <span class="smaller-span">MyClass </span>as with this example
+                       
+                   </p>
+                   <h2>The Universal Selector</h2>
+                   <p>Sometimes we might want to use a properties that would be applied to all elements on the page for example: intialization of margin to zero, setting the box-sizing property to border-box for all elementa, We can achieve this using the universal selector <span class="smaller-span">(*)</span>indicated with the asterisk <span class="smaller-span">*</span> symbol
+                 <code>*{margin: 0;}
+
+                 </code>
+                 This example above sets all elements on the page to have a margin of zero although this could be overwritten later in the page.
+                </p>
+               </section>
            </article>
         </div><!--End of Main Content-->
         <div id=logo-section>
