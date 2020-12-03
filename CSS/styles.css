@@ -9,13 +9,15 @@ h1{
     padding: 0;
     padding-top: 5px;
 }
+a{
+    text-decoration: none;
+}
 /*STYLES MEANT FOR THE HEADER SECTION + THE MAIN NAVIAGATION OF THE PAGE */
 header{
     line-height: 1.6em;
     margin: 0;
     width:100%;
     height: 180px;
-    
     background-color: #66c5e8;
     background-image: url(../IMG/Code_scree.png);
     background-attachment: fixed;
@@ -100,16 +102,15 @@ margin: 0;
 }
 #HTML-nav{
     display: block;
+    position: fixed;
     /*background-color:rgba(180, 204, 180, .5);*/
   
-}
-#HTML-nav a.closebtn{
-   /* display:none;*/
 }
 #HTML-nav ul{
     height: 100vh;
     overflow: hidden;
-   position: fixed;
+   top: 25%;
+   left: 0;
 }
 #HTML-nav li{
     margin: -12px;
@@ -146,7 +147,7 @@ iframe{
 .main-content{
     margin: 0 20px;
     line-height: 1.6em;
-    font-size: 130%;
+    font-size: 120%;
     font-weight: 500;
     text-align: justify;
     font-family: 'Noto Sans TC', sans-serif;
@@ -341,6 +342,14 @@ th:last-child{
 img[src="IMG/HTML-Anatomy.png"]{
    border: 10px solid tomato;
    border-radius: 12px;
+   max-width: 85%;
+   max-height: auto;
+}
+img[src="IMG/boxModelpng.png"], img[src="IMG/Dom.png"]{
+    max-width:85%;
+    max-height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -371,13 +380,17 @@ footer p{
 }
 form /*+ section*/{
     box-sizing: border-box;
-    border-right: 2px solid black;
+  /*  border-right: 2px solid black;*/
     padding: .5em;
     margin: 1em;
 }
 .form-grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns:50% 50%;
+}
+#specialFormgrid{
+display: grid;
+grid-template-columns: 20% 40% 40%;
 }
 .form-contact-image img{
     width: 30px;
@@ -465,44 +478,7 @@ input:focus{
 .LinkMore:focus , .LinkMore:active{
  color: rgba(26,169,217,.7) ;
 }
-/*.Home-description p ,.CSS-description p{
-    border: 2px solid black;
-    text-align:center;
-    width: 500px;
-    height: 300px;
-    margin: 0 auto;
 
-    box-shadow: 6px 6px 10px gray;
-    margin-bottom: 20px;
-    color: black;
-    font-size: 90%;
-    font-weight: 800;
-}
-.CSS-description p{
-    text-align: left;
-    padding-left: 10px;
-}
-.Home-description .paraHosting{
-    font-size: 85%;
-}
-.Home-description img{
-    float: left;
-    margin:4% 4% 4%;
-   /* margin-left: 180px;*
-   width: 200px;
-   height: auto;
-}
-.CSS-description img{
-    float: right;
-    margin-right: 10%;
-    width: 200px;
-   height: 200px;
-}
-img[src="IMG/codeclan.svg"]{
-    width: 200px;
-    height: 100px;
-    float: left;
-}*/
 .lang-border{
     border: 3px solid;
     border-color: rgb(26,169,217);
@@ -552,17 +528,36 @@ img[src="IMG/codeclan.svg"]{
 .cheater-span , .sidenav{
     display: none;
 }
+.span-center{
+    display: block;
+    text-align: center;
+}
+.span-descr{
+    color: black !important;
+    font-weight: bold;
+    font-style: normal !important;
+}
 /* STYLES FOR SCREEN OF 696PX TO 991PX THIS IS MAINLY FOR TABLET PHONE 
  REARRANGEMENT IS BEEN DONE
  ALL STYLES HERE WOULD ONLY ON THAT SCREEN RANGE
 */
-@media(min-width:696px) and (max-width:991px){
+
+
+@media(min-width:696px) and (max-width:1200px){
     header{
         max-width: 100%;
+        flex-wrap: nowrap;
+    }
+    header h1 {
+       font-size: 100%;
+       
+    }
+    header div >span{
+        font-size: 90%;
     }
     #main-nav  a {
- font-size: 90%;
- margin: .25em;
+        font-size: 90%;
+        margin: .25em;
     }
     #HTML-nav li {
         margin-left: -24px;
@@ -592,18 +587,8 @@ img[src="IMG/codeclan.svg"]{
     p.codepen{
         font-size: 115%;
     }
-
-    .Home-description p ,.CSS-description p{
-        height: 250px;
-        font-size: 108% !important;
-        color: black;
-        font-weight: 800;
-    }
     th,td,table{
         font-size: 72%;
-    }
-    #Anatomy{
-        display: none;
     }
     .main-content{
         font-size:100%;
@@ -616,26 +601,29 @@ img[src="IMG/codeclan.svg"]{
         border: none;
         border-right: 2px solid black;
         margin: 0 auto;
-    
     }
     .form-contact-image{
-        margin-left: 1.5em;
+        margin: 1.5em;
     } 
     p.footer-final-note{
         font-size: 90%;
         margin-left: 10px;
     }
-#logo-section p{
+   #logo-section p{
         font-size: 90%;
     }
     textarea{
         width: 250px;
         height: 200px;
     }
+    form{
+        border: none;
+        margin: 0;
+    }
     fieldset{
         box-sizing: border-box;
-        width: 50%;
-        height: 500px;
+        width: 100px;
+        height: auto;
         margin: 1.5em;
     }
     input{
@@ -644,7 +632,24 @@ img[src="IMG/codeclan.svg"]{
     button{
         margin-left: 70px;
     }
+    p.footer-final-note{
+        font-size: 75%;
+    }
+    #specialFormgrid{
+        display: grid;
+        grid-template-columns: 20% 45% 35%;
+    }
+    fieldset legend{
+        font-size: 90%;
+    }
+    .form-contact-image{
+        display: inline;
+        width: 20px; 
+        height: 20px;
+    }
 }
+
+
 /*END OF TABLET VERSION STYLES*/
 
 /*STYLES FOR SMALLER DEVICES 
@@ -670,9 +675,6 @@ MAJORLY DEVICES LIKES PHONES..*/
     }
     h1#css-h1{
         font-size: 135%;
-    }
-   #Anatomy{
-        display: none;
     }
     .grid-cont{
         display: grid;
@@ -705,7 +707,7 @@ MAJORLY DEVICES LIKES PHONES..*/
     }
     .form-grid{
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 100% !important;
     }
     form{
         border: none;

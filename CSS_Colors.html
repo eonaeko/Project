@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>The basics of CSS</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -205,9 +205,9 @@
                    <p>
                        We can assign Id attribute to element on our page and then access them in CSS to style them. The ID attribute is unique and should only be used once on our HTML page, ID selectors allow us to target elements with their ID values. The hash or pound <span class="smaller-span">(#)</span> symbol is used to identifed an id selectors in CSS we can use ID selectors as part of contextual selector
                        <br><br>
-                       HTML Mark up
+                      <span class="span-descr"> HTML Mark up</span>
                        <code class="no-center">&lt;p id=&quot;MyPara&quot;&gt;This is my first paragraphs&lt;/p&gt;</code>
-                       CSS
+                       <span class="span-descr"> CSS</span>
                        <code class="no-center">#MyPara{</code>
                         <code class="no-center">color:blue;<br>
                         background-color:red<br>
@@ -219,10 +219,10 @@
                        We can group elements on our page into a conceptual group by using the class attribute and unlike ID attribute , different elements can shared same class name<br>
                        To target elements belonging to the same class we use the class selector. Class selectors are indicated with a period <span class="smaller-span">(.)</span> at the beginning of the selector.
                        <br><br>
-                       HTML markup
+                       <span class="span-descr"> HTML markup</span>
                        <code class="no-center">&lt;p class=&quot;MyClass&quot;&gt;lovely&lt;/p&gt;</code>
                        <code class="no-center">&lt;div class=&quot;MyClass&quot;&gt;I am learning CSS&lt;/div&gt;</code>
-                       CSS
+                       <span class="span-descr"> CSS</span>
                        <code class="no-center">.MyClass {font-size: 1em;}</code>
                        In the example above, different elements were grouped in a class called MyClass aand was access by CSS following the class name with a period <span class="smaller-span">(.)</span><br><br>
                        We can also be more precise about what we want to styles with CSS
@@ -238,6 +238,121 @@
                  This example above sets all elements on the page to have a margin of zero although this could be overwritten later in the page.
                 </p>
                </section>
+               <section>
+                   <h2>Pseudo-class Selectors</h2>
+                   <p>You mostly have noticed that a link has one color when clicked and another color when you revisit that page or maybe you have notice that some element has a particular color at a time then changes color when the mouse cursor moves over it. Thse particular features is possible because the browser keep a track of different states of an element<br>
+                CSS enables us to give styles to these various states using the <span class="smaller-span">Pseudo-class</span> selector. Pseudo-class selectors are indicated by the colon <span class="smaller-span">(:)</span> character and they go immediately after an element name
+               <br> <span class="span-descr">The Syntax</span><br>
+                <code class="no-center">selector:pseudo-class {</code>
+                  <code class="no-center"> property: value;</code>
+                <code class="no-center">
+                  }</code> 
+                <!--<code>a:fous{color:rgba(120,140,220,.5);}</code>-->
+                There are a number of Pseudo-classes but it is of great importance to know a few that tends to be used very often, you can also always check out its documentation at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"><span class="smaller-span"> MDN web docs</span></a>
+            </p> 
+            <h3>Link Pseudo-classes</h3>
+            <p>We mostly would want to use pseudo-classes on link element as we would keep tracks of user interaction on our links<br>
+                <span class="smaller-span">:link</span>  ---   Applies a style to unclicked (unvisited) links<br>
+                <span class="smaller-span">:visited</span> ---   Applies a style to links that have already been clicked
+            </p>
+            <h3>User action pseudo-classes</h3>
+            <p>We would also be interested in our user&apos;s action on our page.<br>
+                <span class="smaller-span">:focus</span>--- Applies when the element is selected and ready for input<br>
+                <span class="smaller-span">:hover</span>--- Applies when the mouse pointer is over the element<br>
+                <span class="smaller-span">:active</span>--- Applies when the element(such as <span class="smaller-span">link pr button</span>) is in the process of being clicked or tapped
+            </p>
+               </section>
+               <section>
+                   <h2>Pseudo-Element selectors</h2>
+                   <span class="span-descr">The Syntax</span><br>
+                <code class="no-center">selector::pseudo-element {</code>
+                  <code class="no-center"> property: value;</code>
+                <code class="no-center">
+                  }</code> 
+                   <p>
+                       Pseudo-Elemnent selectots are indicated by a double colon (<span class="smaller-span">::</span>) symbol which differentiates them from pseudo-classes. <br>
+                       <span class="smaller-span">::first-line</span><br>
+                       This is a pseudo-element selector that applies style rule to the first line of the specified element but it is limited to the following properties to apply
+                   </p>
+                   <div>
+                       color text-decoration font-properties vertial-align background properties<br>
+                       text-transform word-spacing line-height letter-spacing
+                   </div>
+                   <p>
+                    <span class="smaller-span">::first-letter</span><br>
+                    This is a Pseudo-Element selector that applies to the first letter of the specified element but linted to the following properties:
+                   </p>
+                   <div>
+                    color text-decoration font-properties vertial-align background properties<br>
+                    text-transform word-spacing line-height letter-spacing
+                   <p> we have some other pseudo-element, we can check them out at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"><span class="smaller-span">MDN web docs</span></a></p>
+                </div>
+               </section>
+               <section>
+                   <h2>Attribute Selectors</h2>
+                   <p>
+                       Attribute selectors allow us to select element based on attribute name or values.<br><br>
+                       <span class="medium-span">element[attribute]</span><br>
+                       This <span class="smaller-span">simple attribute selector</span>  allows us to target element based on their attribute name regardless of its value,This attribute selector selects images that have the <span class="smaller-span">alt</span> attribute.
+                       <code>img[alt]{border-color:red}</code><br>
+                       <span class="medium-span">element[attribute =&quot;exact value&quot;]</span><br>
+                       The <span class="smaller-span">exact attribute value selector</span> selects element with a specified value for the attribute, this selects the images with the title attribute having a value of <span class="smaller-span">(&quot;I am love&quot;)</span>
+                       <code>img[title=&quot;I am love&quot;] {border-color:&quot;red&quot;}</code><br>
+                       <span class="medium-span">element[attribute~=&quot;value&quot;]</span><br>
+                       The <span class="smaller-span">partial attribute selector</span> (indicated with a tilde ~) allows us to specify one part of an attribute value, this is able to select the element if it has a title attribute with any part of the value having <span class="smaller-span">&quot;I am&quot;</span>
+                       <code>img[title~&quot;I am&quot;]{border-color:red;}</code><br>
+                       <span class="medium-span">element[attribute|=&quot;value&quot;]</span><br>
+                       The <span class="smaller-span">hypen-seperated attribute value selector </span>(indicated with a bar |) targets hypen-seperated values, this selector matches any link that points to a document written in a variation of English language 
+                       <code>a[hreflang | = &quot;en&quot;]{color:red;}</code><br>
+                       <span class="medium-span">element[attribute^ = &quot;first part of the value &quot;]</span><br>
+                       The <span class="smaller-span">beginning substring attribute value selector </span>(indicated with a caret ^), selects elements whose specified attribute values starts in string of characters in the selector, this selects images that have the src attribute and its values beginning with <span class="smaller-span">images</span>
+                       <code>img[src^ = &quot;image/"]{border-color:red;}</code><br>
+                       <span class="medium-span">element[attribute$ =&quot;last part of the value&quot;]</span><br>
+                       The <span class="smaller-span">ending substring attribute value selector</span> (indicated with a dollar sign $) matches element whose specified attribute end in the string of characters in the selector, this selects images that its src attribute values ends with <span class="smaller-span">.jpg</span>
+                       <code>
+                           img[src$=&quot;.jpg&quot;]{border-color:red;}</code><br>
+                      <span class="medium-span">element[attribute*=&quot;any part of the value&quot;]</span><br>
+                      The <span class="smaller-span">arbitrary substring attribute value selector</span>(indicated with an asterisk *) looks for the provided text string in any part of the attribute value specified, this selects an image as long as the src attribute values contains <span class="smaller-span">img</span> at any part of it
+                      <code>img[src*=&quot;img&quot;]{border-color:red;}</code>
+                   </p>
+                   
+               </section>
+               <section>
+                   <h2> The Big Concepts</h2>
+                   <p>
+                       While learning CSS, it is important to understand some major concepts as they affect the way CSS behave, sometimes we may find ourselves trying to figure out why a particular styles won&apos;t works and various others like this. 
+                       <br>The following concepts helps in our debugging and making thing works and hence improving our CSS knowledge
+                   </p>
+                   <h3>Inhertiance</h3>
+                   <p>We all have one or more things we inherted from our parents, it may for instance be our hair colour, the colour of our iris, genetics properties, same applies to HTML elements as they can pass down certain style properties to other elements they contain and this bring us to understanding a document struture.</p>
+                   <h4>Document Struture</h4>
+                   <p>Every HTML Document would always behave the <span class="smaller-span">html</span> element that inturns would contains an <span class="smaller-span">head</span> element and the <span class="smaller-span">body</span>element , In this analogy, we can consider the html element as a <span class="smaller-span">parent</span> to both the head element and the body element, The body element itself would contain certain element like p, div, section which would build a <span class="smaller-span">parent-child</span> relationship
+                </p>
+                <p>All elements contained within another elemen are said to be its <span class="smaller-span">descendents</span>,Two elements from the same parents are <span class="smaller-span">siblings</span>, only certain properties are inherted and not all 
+                <br><br><img src="IMG/Dom.png" alt="An Illustation of an HTML document sturture"><br>
+               <span class="smaller-span span-center">The image above should bulid a mental picture of relationship between elements</span> 
+                 </p>
+                 <h3>Conflicting styles: The Cascade</h3>
+                 <p>
+                     CSS allows the use of several stylesheets to the same document hence they are bound to conflict for example: a linked CSS may say an h1 should be color red while the embedded CSS says it should be blue then this leads to which style is chosen and this problem comes and gets solved by measuring the style rule to get the weight
+         <br> Weight is considered based on priority of the style rule source, the specificity of the seletor, and rule order which boils down to the meaing of <span class="smaller-span">casade</span>. </p>
+         <blockquote class="blockquote-blue">The &quot;Cascade&quot; refers to what happens when several sources of style information vie for controls of the elements on a page.</blockquote>
+            <h3>Priority</h3>
+            <p>
+                If we don&apos;t apply styles to our webpage, The browser renders its internal stylesheet which is called <span class="smaller-span">user agent stylesheet</span>, Our users cann also apply their own styles called user stylesheet which override the default styles in their browser. The author of the webpage can also attached their own stylesheet which override both the user&apos;s and user&apos;s agent (browser) stylesheet
+            </p>
+            <blockquote class="blockquote-blue"> so in terms of priority, the author&apos;s stylesheet has higher precedence than the user&apos;s stylesheet followed by user&apos;s agent stylesheet </blockquote>
+        <h3>Specificity</h3>
+        <p>
+            There are possibility that conflicts arises in which an element is getting style instrutions from more than one rule for example a rule targets paragraphs and another rule targets paragraphs with an ID of <span class="smaller-span">FirstPara</span>. Whwn two style rules conflicts the specificity of selector is used to select the winner (i.e the most specific)
+        </p>
+        <blockquote class="blockquote-blue">Inline styles are the most specific and will override ID selectors that more specific and override the Class selectors that is more specifc and override individual element selector which is the least specific</blockquote>
+       <p>Although there is alot that go into the calculation of specificity but the basics of it has been already explained but to know more about it inner details , check  out <span class="medium-span"><a href="https://www.w3.org/TR/selectors4/#specificity.">w3.org</a></span></p>
+    <h3>The Rule order</h3>
+    <p>When all stylesheet sources have been sorted by priority, there are likely to be conflicts in rules with equal weightsm In this case, the order which the rules is important </p>
+   <blockquote class="blockquote-blue">The Cascade follows a &quot;last one wins&quot; rule whichever rule appears last has the last say</blockquote>
+</section>
+               <img src="IMG/boxModelpng.png">
            </article>
         </div><!--End of Main Content-->
         <div id=logo-section>
@@ -254,9 +369,10 @@
     </div><!--End of grid-cont-->
     </main>
 
-    <footer>
+    <footer id="footer">
         <p class="footer-text-center"> &copy; Copyright 2020 Designed  by Emmanuel Onaeko</p>
-        <div class="form-grid">
+        <div class="form-grid" id="specialFormgrid">
+            <div></div>
             <form>
                 <fieldset>
                 <legend>Contact-us</legend>
@@ -282,6 +398,7 @@
          You could also contact us via our social media contacts.<br>
          We are looking forward to hearing and working with you.
         </p>
+       
  </section>
  </div>
      </footer>
