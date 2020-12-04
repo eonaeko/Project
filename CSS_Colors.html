@@ -34,10 +34,21 @@
         <div id=special-aside>
         <nav id="HTML-nav">
         <ul> 
-            <li><a href="#">CSS COLORS</a></li>
-            <li><a href="#">CSS SELECTORS</a></li>
-            <li><a href="#">DOM STRUTURE</a></li>
-            <li><a href="#">THE BOX MODEL</a></li>
+            <li><a href="#CSS-intro">Introduction</a></li>
+            <li><a href="#LinkCSS">Applying CSS</a></li>
+            <li><a href="#CSS-comment">CSS Comment</a></li>
+            <li><a href="#CSS-selectors">CSS selectors</a> </li>
+           <!-- <li><a href="Contextual">Contextual Selectors</a></li> -->
+            <li><a href="#idSElECTOR">ID Selector</a></li> 
+            <li><a href="#ClassSelctor">class selector</a></li>
+            <li><a href="#psClass">Pseudo-class selector</a></li>
+            <li><a href="#psElement">Pseudo-Element selector</a></li>
+            <li><a href="#attribute">Attribute Selector</a></li>
+            <li><a href="#Inhertiance">Inhertiance</a></li>
+            <li><a href="#Priority">Priority</a></li>
+            <li><a href="#Specificity">Specificity</a></li>
+            <li><a href="#Rule-Order">Rule order</a></li>
+            <li><a href="#boxModel">Box Model</a></li>
         </ul>
         </nav>
         <div class="div-relative">
@@ -45,17 +56,27 @@
         </span>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">CSS COLORS</a>
-            <a href="#">CSS SELECTORS</a>
-            <a href="#">DOM STRUTURE</a>
-            <a href="#">THE BOX MODEL</a>
+            <a href="#CSS-intro">Introduction</a>
+            <a href="#LinkCSS">Apply in CSS</a>
+            <a href="#CSS-comment">CSS Comment</a>
+            <a href="#CSS-selectors">CSS Selectors</a>
+            <a href="#idSElECTOR">ID Selector</a>
+            <a href="#ClassSelctor">class selector</a>
+            <a href="#psClass">Pseudo-class selector</a>
+            <a href="#psElement">Pseudo-Element selector</a>
+            <a href="#attribute">Attribute Selector</a>
+            <a href="#Inhertiance">Inhertiance</a>
+            <a href="#Priority">Priority</a>
+            <a href="#Specificity">Specificity</a>
+            <a href="#Rule-Order">Rule order</a>
+            <a href="#boxModel">Box Model</a>
         </div><!--Div of id of mySidenav...-->
           </div>
         </div><!--End to the special aside-->
         <div class="main-content" id =main>
            <h1 id="css-h1">Cascading Stylesheets --CSS</h1>
-           <article id="CSS-intro">
-               <section>
+           <article >
+               <section id="CSS-intro">
                 <p>
                     CSS is a language used to give styles to HTML documents, It handles the presentation of your webpage to users, it gives the developer a lot of power to determine how a particular HTML element is displayed to the users for example: the color of the element, it&apos;s background color, the spaces around the element to other element, it&apos;s border, the position it occupies and so on.<br>
                     There have been different versions of CSS but the current version that web developers are using is <span class="smaller-span">CSS3</span>
@@ -77,7 +98,7 @@
                We can have more than one declaration in those curly brackets and this time we would called a <span class="smaller-span">declaration block.</span>
             </p>
                </section>
-               <section>
+               <section id="LinkCSS">
                    <h2>How to apply the css to the document</h2>
                    <p>There are three way to apply CSS to your webpage:<br><br>
                     <span class="medium-span">External Stylesheet:</span><br>
@@ -129,7 +150,7 @@
             Inline styles may come in handy if you want to override some other styles that have applied with exeternal or embedded stylesheets but Inline styles are highly problematic cause they interfere with content of the page and does should be avoided.
         </p>
                </section>
-               <section>
+               <section id="CSS-comment">
                    <h2>CSS Comments</h2>
                    <p>
                        CSS allows for developers to leave comments in their code, this is highly helpful if you are collaborating with someone on a project or even if you are going to come back to the code latter and sometimes you can use to test different styles by commenting and uncommenting them as needed.<br><br>
@@ -139,7 +160,7 @@
                     when stylesheets are parsed*/</code>
                    </p>
                </section>
-               <section>
+               <section id="CSS-selectors">
                    <h2>CSS Selectors</h2>
                    <p>
                        In understanding CSS, we must understand its syntax and also in understanding its syntax and using it to style our page, we most importantly need to understand what CSS selectors are and the different type of selectors there are and the ways of using them to style our page.<br>
@@ -162,7 +183,7 @@
                          When we use grouped selectors, it would make furture possible edits more efficient and less time consuming.
                    </p>
                </section>
-               <section>
+               <section id="Contextual">
                    <h2>Contextual Selectors</h2>
                    <p>In the DOM, we consists elements to be <span class="smaller-span">Parents</span> or <span class="smaller-span">Children</span> because some elements contains other elements while some elements are contained in other elements For example: The <span class="smaller-span">body</span> element can be considered as a <span class="smaller-span">parent</span> because
                     it will contain other element that form the page and we could aslo consider the <span class="smaller-span">body</span> element as a <span class="smaller-span">child</span> cause it is contained in the <span class="smaller-span">html</span> element and this gives rise to other complex relationship between element.
@@ -201,7 +222,7 @@
                 </p> 
                </section>
                <section>
-                   <h2>ID Selectors</h2>
+                   <h2 id="idSElECTOR">ID Selectors</h2>
                    <p>
                        We can assign Id attribute to element on our page and then access them in CSS to style them. The ID attribute is unique and should only be used once on our HTML page, ID selectors allow us to target elements with their ID values. The hash or pound <span class="smaller-span">(#)</span> symbol is used to identifed an id selectors in CSS we can use ID selectors as part of contextual selector
                        <br><br>
@@ -214,7 +235,7 @@
                        }</code>
                        In the example above, we see how the id attribute was used in HTML markup which was later referced through its value with hash <span class="smaller-span">#</span> symbol to identify it as an ID selector and give the following style.
                    </p>
-                   <h2>Class Selectors</h2>
+                   <h2 id="ClassSelctor">Class Selectors</h2>
                    <p>
                        We can group elements on our page into a conceptual group by using the class attribute and unlike ID attribute , different elements can shared same class name<br>
                        To target elements belonging to the same class we use the class selector. Class selectors are indicated with a period <span class="smaller-span">(.)</span> at the beginning of the selector.
@@ -239,7 +260,7 @@
                 </p>
                </section>
                <section>
-                   <h2>Pseudo-class Selectors</h2>
+                   <h2 id="psClass">Pseudo-class Selectors</h2>
                    <p>You mostly have noticed that a link has one color when clicked and another color when you revisit that page or maybe you have notice that some element has a particular color at a time then changes color when the mouse cursor moves over it. Thse particular features is possible because the browser keep a track of different states of an element<br>
                 CSS enables us to give styles to these various states using the <span class="smaller-span">Pseudo-class</span> selector. Pseudo-class selectors are indicated by the colon <span class="smaller-span">(:)</span> character and they go immediately after an element name
                <br> <span class="span-descr">The Syntax</span><br>
@@ -263,7 +284,7 @@
             </p>
                </section>
                <section>
-                   <h2>Pseudo-Element selectors</h2>
+                   <h2 id="psElement">Pseudo-Element selectors</h2>
                    <span class="span-descr">The Syntax</span><br>
                 <code class="no-center">selector::pseudo-element {</code>
                   <code class="no-center"> property: value;</code>
@@ -289,7 +310,7 @@
                 </div>
                </section>
                <section>
-                   <h2>Attribute Selectors</h2>
+                   <h2 id="attribute">Attribute Selectors</h2>
                    <p>
                        Attribute selectors allow us to select element based on attribute name or values.<br><br>
                        <span class="medium-span">element[attribute]</span><br>
@@ -323,7 +344,7 @@
                        While learning CSS, it is important to understand some major concepts as they affect the way CSS behave, sometimes we may find ourselves trying to figure out why a particular styles won&apos;t works and various others like this. 
                        <br>The following concepts helps in our debugging and making thing works and hence improving our CSS knowledge
                    </p>
-                   <h3>Inhertiance</h3>
+                   <h3 id="Inhertiance">Inhertiance</h3>
                    <p>We all have one or more things we inherted from our parents, it may for instance be our hair colour, the colour of our iris, genetics properties, same applies to HTML elements as they can pass down certain style properties to other elements they contain and this bring us to understanding a document struture.</p>
                    <h4>Document Struture</h4>
                    <p>Every HTML Document would always behave the <span class="smaller-span">html</span> element that inturns would contains an <span class="smaller-span">head</span> element and the <span class="smaller-span">body</span>element , In this analogy, we can consider the html element as a <span class="smaller-span">parent</span> to both the head element and the body element, The body element itself would contain certain element like p, div, section which would build a <span class="smaller-span">parent-child</span> relationship
@@ -337,22 +358,98 @@
                      CSS allows the use of several stylesheets to the same document hence they are bound to conflict for example: a linked CSS may say an h1 should be color red while the embedded CSS says it should be blue then this leads to which style is chosen and this problem comes and gets solved by measuring the style rule to get the weight
          <br> Weight is considered based on priority of the style rule source, the specificity of the seletor, and rule order which boils down to the meaing of <span class="smaller-span">casade</span>. </p>
          <blockquote class="blockquote-blue">The &quot;Cascade&quot; refers to what happens when several sources of style information vie for controls of the elements on a page.</blockquote>
-            <h3>Priority</h3>
+            <h3 id="Priority">Priority</h3>
             <p>
                 If we don&apos;t apply styles to our webpage, The browser renders its internal stylesheet which is called <span class="smaller-span">user agent stylesheet</span>, Our users cann also apply their own styles called user stylesheet which override the default styles in their browser. The author of the webpage can also attached their own stylesheet which override both the user&apos;s and user&apos;s agent (browser) stylesheet
             </p>
             <blockquote class="blockquote-blue"> so in terms of priority, the author&apos;s stylesheet has higher precedence than the user&apos;s stylesheet followed by user&apos;s agent stylesheet </blockquote>
-        <h3>Specificity</h3>
+        <h3 id="Specificity">Specificity</h3>
         <p>
             There are possibility that conflicts arises in which an element is getting style instrutions from more than one rule for example a rule targets paragraphs and another rule targets paragraphs with an ID of <span class="smaller-span">FirstPara</span>. Whwn two style rules conflicts the specificity of selector is used to select the winner (i.e the most specific)
         </p>
         <blockquote class="blockquote-blue">Inline styles are the most specific and will override ID selectors that more specific and override the Class selectors that is more specifc and override individual element selector which is the least specific</blockquote>
-       <p>Although there is alot that go into the calculation of specificity but the basics of it has been already explained but to know more about it inner details , check  out <span class="medium-span"><a href="https://www.w3.org/TR/selectors4/#specificity.">w3.org</a></span></p>
-    <h3>The Rule order</h3>
+       <p>Although there is alot that go into the calculation of specificity but the basics of it has been already explained but to know more about it inner details , check  out <span class="smaller-span"><a href="https://www.w3.org/TR/selectors4/#specificity.">w3.org</a></span></p>
+    <h3 id="Rule-Order">The Rule order</h3>
     <p>When all stylesheet sources have been sorted by priority, there are likely to be conflicts in rules with equal weightsm In this case, the order which the rules is important </p>
    <blockquote class="blockquote-blue">The Cascade follows a &quot;last one wins&quot; rule whichever rule appears last has the last say</blockquote>
+  <h3 id="boxModel">The Box Model</h3>
+  <p>Every element on a webpage (both block and inline) can be thought of as being contained in a little rectangular box and which we can apply width, height, padding, margin, border to it <br>
+    <img src="IMG/boxModelpng.png"><br>
+    <span class="smaller-span">Content Area</span><br> At the core of an element box is the content itself<br>
+    <span class="smaller-span">Padding Area</span><br> The padding is the area between the content and a border (optional), The padding of an element can be set using the <span class="smaller-span"> padding</span> property<br>
+    <span class="smaller-span">Border</span><br> The border is the line that surrounds an element and its padding, border are optional but if you specify a border ,you must use the border-style property for there to exists a border actually.<br>
+   <span class="smaller-span">Margin</span><br> The Margin is an optional amount of space added on the outside of the border and they are the spaces between two different HTML elements <br>
+</p>
+
 </section>
-               <img src="IMG/boxModelpng.png">
+             <section>
+                 <p class="blockquote-blue">
+                     After learing the basics of HTML, CSS, and Javascript, you might want to learn more about Web development, get hands on praticals and explore<br>
+                     The following website and content creators we found might be a good start as they have helped the author of this page and costantly still helping him
+                 </p>
+                <div class="lang-border">
+                    <a href="https://www.w3schools.com/" ><img src="IMG/w3schools-logo.jpg" alt="" class="image-center"></a>
+            
+                    <div>
+                <div><p> W3Schools is an educational website for learning web technologies online. Content includes tutorials and references relating to HTML, CSS, JavaScript, JSON, PHP, Python, AngularJS, React.js, SQL, Bootstrap, Sass, Node.js, jQuery, XQuery, AJAX, XML, Raspberry Pi, C++, C# and Java.</p></div>
+                   <div> <a href="https://www.w3schools.com/" class="LinkMore">VISIT W3Schools</a></div>
+                </div>
+            </div> 
+
+            <div class="lang-border">
+                <a href="https://www.codecademy.com/" ><img src="IMG/Codecademy.svg.png" alt=""  class="image-center"></a> 
+        
+                <div>
+            <div><p> Codecademy is an American online interactive platform that offers free coding classes in 12 different programming languages including Python (pandas-Python library, Beautiful Soup-Python Library), Java, Go, JavaScript (jQuery, AngularJS, React.js), Ruby (Ruby on Rails-Ruby framework), SQL, C++, C#, Swift, and Sass, as well as markup languages HTML and CSS.<br> The site also offers a paid "Pro" option that gives users access to personalized learning plans, quizzes, and realistic projects</p></div>
+               <div> <a href="https://www.codecademy.com/" class="LinkMore">CHECK OUT CODECADEMY</a></div>
+            </div>
+        </div> 
+
+        <div class="lang-border">
+            <a href="https://www.freecodecamp.org/" ><img src="IMG/freecodecamp.png" alt="" class="image-center"></a>
+    
+            <div>
+        <div><p> freeCodeCamp is a non-profit organization that consists of an interactive learning web platform, an online community forum, chat rooms, online publications and local organizations that intend to make learning web development accessible to anyone.</p></div>
+           <div> <a href="https://www.freecodecamp.org/" class="LinkMore">FREECODECAMP ALL THE WAY</a></div>
+        </div>
+    </div> 
+
+    <div class="lang-border">
+        <a href="https://www.coursera.org/specializations/web-design" ><img src="IMG/coursera.png" alt=""></a>
+
+        <div>
+    <div><p> Coursera is an American massive open online course provider founded in 2012 by Stanford University's computer science professors Andrew Ng and Daphne Koller that offers massive open online courses, specializations, degrees, professional and mastertrack courses. Coursera courses are taught by outstanding universities and outstanding leturers and tutors
+        <br> I recommend the <a href="https://www.coursera.org/specializations/web-design"><span class="smaller-span">web design for everybody specialization</span></a>  taught by Collen ven Lent and the <a href="https://umich.edu/"> <span class="smaller-span"> University of Michigan</span></a>
+    </p></div>
+       <div> <a href="https://www.coursera.org/specializations/web-design" class="LinkMore">Take the web design for everybody specialization</a></div>
+    </div>
+</div> 
+
+<div class="lang-border">
+    <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" ><img src="IMG/udemy.png" alt="" class="image-center"></a>
+
+    <div>
+<div><p>Udemy is a online course provider that aimed to help people get to master their skills from beginner to been  a professional<br>You can take the The Complete 2020 Web Development Bootcamp taught by Angela Yu</p></div>
+   <div> <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="LinkMore">TAKE THE ANGELA YU COURSE</a></div>
+</div>
+</div> 
+<div class="lang-border">
+    <a><img src="IMG/youtube.png" alt="" class="image-center"></a>
+
+    <div>
+<div><p>YouTube is a tested and trusted site for video sharing, Millons of content creators use this platform to create educational and highly helpful contnts which always avaliable to users at no free.<br>This platform has helped a lot of people in their Web development journey, although there are millons of web development content creators but i would love the following youtube channels
+ <br><a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA"><span class="medium-span">Travery Media</span></a><br>
+ <a href="https://www.youtube.com/channel/UCZUyPT9DkJWmS_DzdOi7RIA"><span class="medium-span">Caleb curry</span></a><br>
+ <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q"><span class="medium-span">Dev Ed</span></a><br>
+ <a href=https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ""><span class="medium-span">freeCodeCamp </span></a><br>
+ <a href="https://www.youtube.com/channel/UC54NcJvLCvM2CNaBjd5j6HA"><span class="medium-span">RealCandyTough</span></a>
+ <a href="https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw"><span class="medium-span">Google Chrome Developers </span></a>
+
+</p></div>
+  <!--<div> <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="LinkMore">TAKE THE ANGELA YU COURSE</a></div>--> 
+</div>
+</div> 
+             </section>  
            </article>
         </div><!--End of Main Content-->
         <div id=logo-section>

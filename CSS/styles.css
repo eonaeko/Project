@@ -11,6 +11,7 @@ h1{
 }
 a{
     text-decoration: none;
+    color: rgb(26,169,217);
 }
 /*STYLES MEANT FOR THE HEADER SECTION + THE MAIN NAVIAGATION OF THE PAGE */
 header{
@@ -23,8 +24,6 @@ header{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /*position: sticky;
-    top: 0;*/
     display: flex;
     justify-content: space-around;
 }
@@ -34,7 +33,6 @@ header div{
 }
 header  h1{
     font-family: 'Roboto Mono', monospace, serif;
-    /*font-style: italic;*/
     font-size: 1.5em;
     word-spacing: .35em;
     color:  rgb(26,169,217);
@@ -74,37 +72,23 @@ margin: 0;
     color:#34ebb7;
     color: rgb(26,169,217);
     background-color: #e4e1e1;
-    /*background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,
-    #d1d1d1 51%, #fefefe 100%);*/
 }
 #main-nav a:focus, #main-nav a:hover  {
     background-color:rgba(199, 235, 199, 1);
 }
 #main-nav .active{
     background-color:rgba(124, 148, 124, 1);
-    /*background-color:rgba(24,255,180 , .1);*/
-    
 }
 #main-nav a.icon{
     display: none;
 }
 /* STYLES FOR THE ASIDE NAVIAGATION FOR EASY ACCESS TO THE LEARNHTML PAGE*/
-/*#aside{
-    margin:0;
-   /* background-color: rgb(140,80, 120);*
-   background-color:rgb(200,204,255);
-   background-color:rgba(180, 204, 180, .5);
-   
-}*/
 #special-aside{
    background-color:rgba(180, 204, 180, .5);
- 
 }
 #HTML-nav{
     display: block;
     position: fixed;
-    /*background-color:rgba(180, 204, 180, .5);*/
-  
 }
 #HTML-nav ul{
     height: 100vh;
@@ -138,6 +122,13 @@ margin: 0;
    color: rgba(26,169,217,rgba(26,169,217,.7));
    font-size: larger;
 }
+i.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+#dropdown{
+    display: none;
+}
 iframe{
     width: 92vw;
     height: 100vh;
@@ -152,13 +143,11 @@ iframe{
     text-align: justify;
     font-family: 'Noto Sans TC', sans-serif;
     font-family: 'Dosis', sans-serif;
-   
 }
 .main-content h1,.main-content h2{
     text-transform: uppercase;
     font-family:  'Roboto Mono', monospace, serif;
-   /* font-family: 'Noto Sans TC', sans-serif;*/
-   color: rgb(26,169,217);
+    color: rgb(26,169,217);
 }
 .main-content h1{
     font-size: 2.5em;
@@ -186,11 +175,11 @@ code{
 .main-content span {
     font-size: 130%;
     font-style: italic;
-    color:  rgb(26,169,217);
+    color:  rgba(26,169,217,.8);
 }
 .main-content .medium-span{
-    font-weight: bold;
-    font-size: 120%;
+   font-weight: bold;
+    font-size: 110%;
     font-style: normal;
 }
 .main-content .smaller-span{
@@ -202,9 +191,6 @@ code{
     font-family: 'Roboto Mono', monospace, serif;
     text-transform: capitalize;
      color: rgb(26,169,217);
-}
-.main-content h3~p{
-  /*  margin-left: 15px;*/
 }
 p.codepen{
     margin: 0;
@@ -221,9 +207,7 @@ p.codepen{
 }
 .grid-cont{
     display: grid;
-   /* grid-template-columns: 1.5fr 6fr 1fr;*/
    grid-template-columns: 20% 70% 10%;
-    /*grid-template-rows: 2fr 5fr 2fr;"*/
 }
 .special-grid{
     display: grid;
@@ -302,11 +286,6 @@ pre{
     font-size: 120%;
     font-style: italic;
     padding: 10px;
-    /*border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom: inset tomato 1px;
-   border-right:inset tomato 2px ;*/
    box-shadow: 6px 6px 10px gray;
 }
 .illustrationTable td .illustrationTable th{
@@ -314,7 +293,6 @@ pre{
     border-bottom:0;
 }
 th,td,table{
-    /*border: 1px solid black;*/
     border-collapse: collapse;
     font-size: 90%;
 }
@@ -358,7 +336,6 @@ These styles are used to style the look for both the footer and form */
 footer{
     background-color: #66c5e8;
     background-color:rgba(180, 204, 180,.5);
-    /*background-color:  rgb(26,169,217);*/
     font-family: 'Roboto Mono', monospace, serif;
     margin-top: -15px;
 }
@@ -378,9 +355,8 @@ footer p{
     text-decoration: none;
     font-size: 80%;
 }
-form /*+ section*/{
+form{
     box-sizing: border-box;
-  /*  border-right: 2px solid black;*/
     padding: .5em;
     margin: 1em;
 }
@@ -412,7 +388,6 @@ textarea:focus{
 }
 fieldset{
     box-sizing: border-box;
-    /*border-right:3px solid  black;*/
     margin-right: 10px;
     border-radius: 20px;
     width: 200px;
@@ -492,26 +467,15 @@ input:focus{
     margin-right: 20px;
     width: 100px;
 }
-/*.lang-text {
-    margin-top: 11px;
-}
-
-.lang-main {
-    padding-bottom: 10px;
-}*/
-
 .codeclan{
-   /* margin: 1%;
-  /*  font-size: 95%;*/
     font-family:'Roboto Mono', monospace, serif;
 }
- img[ src="IMG/codepen.svg"], img[src="IMG/hosting.svg"] {
+ .image-center {
   margin: 3em 0;
  }
  img[src="IMG/codeclan.svg"]{
      margin: 1.5em 0;
  }
-     
 .intro-Home-para{
     font-family:'Roboto Mono', monospace, serif ;
     font-size: 140%;
@@ -657,17 +621,14 @@ MAJORLY DEVICES LIKES PHONES..*/
 @media(max-width:695px) {
     .smaller-header{
         margin: 0;
-        /*background-color: #66c5e8;*/
         display: block !important;
         width: 100%; 
-       /* height: 50%; */
        height:auto !important;
     }
  .smaller-header div{
         text-align: center !important;
     }
     .smaller-header h1,.smaller-header div span{
-       /* color: black;*/
         font-style: normal; 
     }
    .main-content h1{
@@ -689,7 +650,6 @@ MAJORLY DEVICES LIKES PHONES..*/
          font-size: 100%;
          box-sizing: border-box;
         max-width: 100vh; 
-        /*width: 100%;*/
          margin:0;
          margin-left: 1em;
          display: block;
@@ -750,23 +710,6 @@ MAJORLY DEVICES LIKES PHONES..*/
     .footer-final-note{
         margin: 0 auto;
     }
-    /*.Home-description p , .CSS-description p{
-        width:50%;
-        height:auto;
-        font-size: 85%;
-        box-shadow: none;
-        border-radius: 10px;
-        border-color: rgb(26,169,217);
-        color: black;
-
-    }
-    .CSS-description p{
-        overflow: auto;
-    }
-    .Home-description img, .CSS-description img{
-        width: 100px;
-        height: 100px;
-    }*/
     .lang-border{
         display: block;
         border-color: rgb(26,169,217);
@@ -830,9 +773,6 @@ MAJORLY DEVICES LIKES PHONES..*/
     a.icon{
     display: inline;
 }
-   /*aside {
-    background-color:rgba(180, 204, 180, 1);
-   }*/
    .div-relative{
        position: relative;
    }
@@ -850,7 +790,7 @@ MAJORLY DEVICES LIKES PHONES..*/
     width: 0;
    position: fixed;
     z-index: 1;
-    top: ;
+    top:10%;
     left: 0;
     background-color:rgba(180, 204, 180, 1);
     overflow-x: hidden;
