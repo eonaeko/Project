@@ -45,7 +45,7 @@ var gridCont = document.querySelector(".grid-cont");
       headerH1.style.fontSize ="110%";
       headerH1.style.marginTop ="0";
       headerH1.style.marginBottom ="1em";
-      gridCont.style.marginTop ="-17px"
+     // gridCont.style.marginTop ="-17px";
     }
   }
   

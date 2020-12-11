@@ -39,7 +39,7 @@ header  h1{
     word-spacing: .35em;
     color:  rgb(26,169,217);
     margin-bottom: 5px;
-    margin-top: 20px   
+    margin-top: 20px 
 }
 header div > span{
     font-family: 'Roboto Mono', monospace, serif;
@@ -513,13 +513,13 @@ input:focus{
 
 
 @media(min-width:696px) and (max-width:1200px){
+    
     header{
         max-width: 100%;
         flex-wrap: nowrap;
     }
     header h1 {
        font-size: 100%;
-       
     }
     header div >span{
         font-size: 90%;
@@ -624,14 +624,11 @@ input:focus{
 /*STYLES FOR SMALLER DEVICES 
 MAJORLY DEVICES LIKES PHONES..*/
 @media(max-width:695px) {
-    body{
-        margin: 0;
-    }
     .smaller-header{
-        margin: 0;
+        margin-top: -20px;
         display: block !important;
         width: 100%; 
-       height:auto !important;
+        height:auto !important;
     }
  .smaller-header div{
         text-align: center !important;
